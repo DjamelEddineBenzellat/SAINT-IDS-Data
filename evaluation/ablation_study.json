@@ -1,0 +1,176 @@
+{
+  "study": "IF+LightGBM Ensemble Ablation Study",
+  "timestamp": "2026-04-06T11:01:03.742903+00:00",
+  "runtime_seconds": 397.09,
+  "test_set_size": 424612,
+  "test_set_distribution": {
+    "BENIGN": 340965,
+    "PORT_SCAN": 23840,
+    "BRUTE_FORCE": 2075,
+    "MITM": 334,
+    "DOS": 57103,
+    "DATA_EXFILTRATION": 295,
+    "UNKNOWN": 0
+  },
+  "alert_thresholds": {
+    "critical": 0.85,
+    "warning": 0.5
+  },
+  "configurations": [
+    {
+      "config": "LightGBM Only",
+      "label": "A",
+      "lgbm_weight": 1.0,
+      "if_weight": 0.0,
+      "classification_f1_weighted": 0.998603,
+      "classification_fpr": 0.001622,
+      "f1_per_class": {
+        "BENIGN": 0.9991,
+        "PORT_SCAN": 0.9968,
+        "BRUTE_FORCE": 0.9995,
+        "MITM": 0.7598,
+        "DOS": 0.999,
+        "DATA_EXFILTRATION": 0.7707,
+        "UNKNOWN": 0.0
+      },
+      "recall_per_class": {
+        "BENIGN": 0.9984,
+        "PORT_SCAN": 0.9996,
+        "BRUTE_FORCE": 0.999,
+        "MITM": 0.9281,
+        "DOS": 0.9995,
+        "DATA_EXFILTRATION": 0.9627,
+        "UNKNOWN": 0.0
+      },
+      "alert_level_tpr": 0.999259,
+      "alert_level_fpr": 1.0,
+      "alert_recall_per_class": {
+        "PORT_SCAN": 0.9996224832214765,
+        "BRUTE_FORCE": 0.9990361445783132,
+        "MITM": 0.9281437125748503,
+        "DOS": 0.9994921457716758,
+        "DATA_EXFILTRATION": 0.9627118644067797,
+        "UNKNOWN": 0.0
+      },
+      "if_boosted_true_attacks": 0,
+      "if_boosted_false_alarms": 0
+    },
+    {
+      "config": "90/10 Ensemble",
+      "label": "B",
+      "lgbm_weight": 0.9,
+      "if_weight": 0.1,
+      "classification_f1_weighted": 0.998603,
+      "classification_fpr": 0.001622,
+      "f1_per_class": {
+        "BENIGN": 0.9991,
+        "PORT_SCAN": 0.9968,
+        "BRUTE_FORCE": 0.9995,
+        "MITM": 0.7598,
+        "DOS": 0.999,
+        "DATA_EXFILTRATION": 0.7707,
+        "UNKNOWN": 0.0
+      },
+      "recall_per_class": {
+        "BENIGN": 0.9984,
+        "PORT_SCAN": 0.9996,
+        "BRUTE_FORCE": 0.999,
+        "MITM": 0.9281,
+        "DOS": 0.9995,
+        "DATA_EXFILTRATION": 0.9627,
+        "UNKNOWN": 0.0
+      },
+      "alert_level_tpr": 0.999247,
+      "alert_level_fpr": 0.999994,
+      "alert_recall_per_class": {
+        "PORT_SCAN": 0.9996224832214765,
+        "BRUTE_FORCE": 0.9990361445783132,
+        "MITM": 0.9281437125748503,
+        "DOS": 0.9994746335569059,
+        "DATA_EXFILTRATION": 0.9627118644067797,
+        "UNKNOWN": 0.0
+      },
+      "if_boosted_true_attacks": 0,
+      "if_boosted_false_alarms": 0
+    },
+    {
+      "config": "70/30 Ensemble",
+      "label": "C",
+      "lgbm_weight": 0.7,
+      "if_weight": 0.3,
+      "classification_f1_weighted": 0.998603,
+      "classification_fpr": 0.001622,
+      "f1_per_class": {
+        "BENIGN": 0.9991,
+        "PORT_SCAN": 0.9968,
+        "BRUTE_FORCE": 0.9995,
+        "MITM": 0.7598,
+        "DOS": 0.999,
+        "DATA_EXFILTRATION": 0.7707,
+        "UNKNOWN": 0.0
+      },
+      "recall_per_class": {
+        "BENIGN": 0.9984,
+        "PORT_SCAN": 0.9996,
+        "BRUTE_FORCE": 0.999,
+        "MITM": 0.9281,
+        "DOS": 0.9995,
+        "DATA_EXFILTRATION": 0.9627,
+        "UNKNOWN": 0.0
+      },
+      "alert_level_tpr": 0.999223,
+      "alert_level_fpr": 0.999968,
+      "alert_recall_per_class": {
+        "PORT_SCAN": 0.9995805369127517,
+        "BRUTE_FORCE": 0.9990361445783132,
+        "MITM": 0.9251497005988024,
+        "DOS": 0.9994746335569059,
+        "DATA_EXFILTRATION": 0.9627118644067797,
+        "UNKNOWN": 0.0
+      },
+      "if_boosted_true_attacks": 0,
+      "if_boosted_false_alarms": 0
+    },
+    {
+      "config": "50/50 Ensemble",
+      "label": "D",
+      "lgbm_weight": 0.5,
+      "if_weight": 0.5,
+      "classification_f1_weighted": 0.998603,
+      "classification_fpr": 0.001622,
+      "f1_per_class": {
+        "BENIGN": 0.9991,
+        "PORT_SCAN": 0.9968,
+        "BRUTE_FORCE": 0.9995,
+        "MITM": 0.7598,
+        "DOS": 0.999,
+        "DATA_EXFILTRATION": 0.7707,
+        "UNKNOWN": 0.0
+      },
+      "recall_per_class": {
+        "BENIGN": 0.9984,
+        "PORT_SCAN": 0.9996,
+        "BRUTE_FORCE": 0.999,
+        "MITM": 0.9281,
+        "DOS": 0.9995,
+        "DATA_EXFILTRATION": 0.9627,
+        "UNKNOWN": 0.0
+      },
+      "alert_level_tpr": 0.999175,
+      "alert_level_fpr": 0.999927,
+      "alert_recall_per_class": {
+        "PORT_SCAN": 0.9995385906040268,
+        "BRUTE_FORCE": 0.9990361445783132,
+        "MITM": 0.9251497005988024,
+        "DOS": 0.9994571213421362,
+        "DATA_EXFILTRATION": 0.9593220338983051,
+        "UNKNOWN": 0.0
+      },
+      "if_boosted_true_attacks": 0,
+      "if_boosted_false_alarms": 0
+    }
+  ],
+  "best_configuration": "LightGBM Only",
+  "best_label": "A",
+  "conclusion": "Configuration 'LightGBM Only' achieves the best trade-off with F1=0.998603 and FPR=0.001622."
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "PHI Sanitizer",
+    "iterations": 100,
+    "p50_ms": 0.0084,
+    "p95_ms": 0.0126,
+    "p99_ms": 0.3694,
+    "mean_ms": 0.0142
+  },
+  {
+    "name": "CKKS Encrypt + HMAC",
+    "iterations": 100,
+    "p50_ms": 0.0647,
+    "p95_ms": 0.1969,
+    "p99_ms": 0.7103,
+    "mean_ms": 0.0828
+  },
+  {
+    "name": "CKKS Decrypt",
+    "iterations": 100,
+    "p50_ms": 0.0244,
+    "p95_ms": 0.0531,
+    "p99_ms": 0.1127,
+    "mean_ms": 0.0306
+  },
+  {
+    "name": "CKKS Accuracy Loss",
+    "iterations": 50,
+    "mean_absolute_error": "1.95e-07",
+    "max_absolute_error": "1.95e-07",
+    "classification_agreement": "100%"
+  },
+  {
+    "name": "Full Pipeline (sanitize+encrypt+decrypt)",
+    "iterations": 100,
+    "p50_ms": 0.0842,
+    "p95_ms": 0.1659,
+    "p99_ms": 0.4365,
+    "mean_ms": 0.1061
+  }
+]
