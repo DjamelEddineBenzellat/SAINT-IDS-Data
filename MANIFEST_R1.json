@@ -132,7 +132,7 @@
  {
   "file": "figures_r1/figure1_r1.pdf",
   "paper": "Figure 1",
-  "sha256": "d9a59212a25c303c571332b1344255e2972115217bbd66c291127ccc8e2d251d"
+  "sha256": "bbfd8f469445eb1976cd4c9521d437b1df3f20aaeb653373deb678d32b140920"
  },
  {
   "file": "figures_r1/figure2_r1.pdf",
@@ -467,6 +467,6 @@
  {
   "file": "scripts_r1/figures/generate_diagrams_r1.py",
   "paper": "analysis script",
-  "sha256": "d9f4d80920378d5621fa5b205a173f29fd83e188795f15855b70a1605f731fcf"
+  "sha256": "5c39ea9b37cc0c1cfacfda397aea1dfe26e4e79da4e64b6eade3c51fa9d8d0cc"
  }
 ]

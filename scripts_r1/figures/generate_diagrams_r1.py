@@ -75,9 +75,9 @@ def figure1() -> None:
     ax.axis("off")
 
     # Edge node (hospital network)
-    region(ax, 0.005, 0.205, 0.99, 0.315, "EDGE NODE (hospital network, x86 gateway)", FILL["edge"], BLUE)
+    region(ax, 0.005, 0.205, 0.99, 0.315, "EDGE NODE (hospital network, x86 server or gateway)", FILL["edge"], BLUE)
     yb, hb = 0.27, 0.18
-    box(ax, 0.02, yb, 0.175, hb, "Flow collector",
+    box(ax, 0.02, yb, 0.175, hb, "Flow extractor",
         ["headers only, no payload", "33-feature flow vector", "DICOM 104/11112, HL7 2575,", "FHIR 443/8080 (port flags)"])
     box(ax, 0.225, yb, 0.2, hb, "Scoring and decision",
         ["LightGBM (ONNX Runtime)", r"alert if $s=1-p_{\mathrm{BENIGN}}\geq\tau$", r"$\tau=0.25$; + fast filter", "evasion rules: signals only"])
@@ -100,7 +100,7 @@ def figure1() -> None:
     # Key holder (middle) and receiver (right, under the relay)
     region(ax, 0.30, 0.005, 0.32, 0.185, "HOSPITAL KEY HOLDER (SOC)", FILL["key"], GREEN)
     box(ax, 0.315, 0.018, 0.29, 0.135, "Decryption",
-        ["secret key", "batches for incident response", "aggregates (minimum window)"], edge=GREEN)
+        ["secret key", "batches for incident response", "aggregates (minimum window advised)"], edge=GREEN)
     region(ax, 0.65, 0.005, 0.345, 0.185, "UNTRUSTED RECEIVER (cloud)", FILL["cloud"], ORANGE)
     box(ax, 0.665, 0.018, 0.315, 0.135, "Encrypted alert receiver",
         ["verifies HMAC and key id", "homomorphic aggregation", "public key only: cannot decrypt"],
