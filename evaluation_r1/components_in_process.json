@@ -1,0 +1,69 @@
+{
+ "repo_commit": "7a67befe0df4e8091f73759e2e34b0cd7719757e",
+ "healthcare_suite": {
+  "L0_ml_only": {
+   "attacks": 14,
+   "detected": 0,
+   "baselines": 2,
+   "false_alarms": 0
+  },
+  "L1_ml_plus_rules": {
+   "attacks": 14,
+   "detected": 9,
+   "baselines": 2,
+   "false_alarms": 0
+  }
+ },
+ "cost": {
+  "n_flows": 2000,
+  "alert_share": 0.18,
+  "stage_mean_ms": {
+   "ingest": 0.05015446799689016,
+   "score_incl_rules": 0.21644208151155908,
+   "rules": 0.000824326494239358,
+   "shap": 8.324698042012642,
+   "route_incl_enqueue": 0.10623113849123911,
+   "alert_vector": 0.012434477991519088
+  },
+  "ckks": {
+   "encrypt_ms_per_ciphertext": 8.634333333333332,
+   "alerts_per_ciphertext": 6.315789473684211,
+   "encrypt_ms_per_alert": 1.3671027777777776,
+   "relay_counters": {
+    "encrypted_alerts": 360,
+    "ciphertexts": 57,
+    "dropped_queue_full": 0
+   }
+  },
+  "per_flow_mean_ms_by_config": {
+   "L0_ml_only": 0.372003361505449,
+   "L1_plus_rules": 0.37282768799968835,
+   "L2_plus_shap": 8.69752573001233,
+   "L3_plus_ckks_amortized": 8.94360423001233
+  },
+  "note": "L3 adds the background encryption cost amortized over all flows (alerts x encrypt per alert); routing cost includes the non-blocking enqueue. Measured with every flow in one process."
+ },
+ "test_split": {
+  "n": 364800,
+  "L0_ml_only": {
+   "TP": 63699,
+   "FP": 432,
+   "TN": 300625,
+   "FN": 44,
+   "recall": 0.99930972812701,
+   "benign_alert_pct": 0.14349442132220808
+  },
+  "L1_ml_plus_rules": {
+   "TP": 63699,
+   "FP": 432,
+   "TN": 300625,
+   "FN": 44,
+   "recall": 0.99930972812701,
+   "benign_alert_pct": 0.14349442132220808
+  },
+  "flows_with_rule_hits": 0,
+  "alerts_added_by_rules": 0,
+  "added_by_rules_true_attacks": 0,
+  "added_by_rules_benign": 0
+ }
+}

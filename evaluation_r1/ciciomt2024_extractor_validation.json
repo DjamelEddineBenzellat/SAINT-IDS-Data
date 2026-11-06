@@ -1,0 +1,868 @@
+{
+ "repo_commit": "1b1a94800dd452a24401885b80d8b4b263343b4e",
+ "pcap": "Friday-WorkingHours.pcap",
+ "pcap_bytes": 8839309056,
+ "max_packets": null,
+ "published_rows": 703245,
+ "published_labels": {
+  "BENIGN": 414322,
+  "PortScan": 158930,
+  "DDoS": 128027,
+  "Bot": 1966
+ },
+ "variants": {
+  "first_fin": {
+   "extraction": {
+    "packets": 9997874,
+    "used": 9941833,
+    "skipped": {
+     "arp": 46408,
+     "proto_0": 631,
+     "proto_2": 117,
+     "proto_58": 383,
+     "proto_1": 965,
+     "ipv4_fragment": 196,
+     "proto_132": 62
+    },
+    "seconds": 57.1,
+    "first_us": 1499428790315195,
+    "last_us": 1499457761169108
+   },
+   "extracted_flows": 804036,
+   "clock": {
+    "offset_hours": 3,
+    "unique_key_pairs": 311234,
+    "unique_key_pairs_in_window": 311234
+   },
+   "published_in_span": 703245,
+   "matched": 624932,
+   "matched_pct_of_published": 88.86405164629682,
+   "matched_pct_of_extracted": 77.7243805003756,
+   "unmatched_published_by_label": {
+    "DDoS": 42812,
+    "BENIGN": 35407,
+    "PortScan": 64,
+    "Bot": 30
+   },
+   "median_dt_s": 14.556522965431213,
+   "first_fin/count/sample": {
+    "mean_agree_pct": 68.9847555414029,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 81.51158846082454,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 577.5635228191987
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 89.09337335902147,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 52.300890336868655,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 18.865045087800308
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 35.385609954363034,
+      "median_rel_err": 0.015583019986250543,
+      "p99_rel_err": 2940.7277818747
+     },
+     "Flow Packets/s": {
+      "agree_pct": 81.5098282693157,
+      "median_rel_err": 9.999999748378752e-11,
+      "p99_rel_err": 77.99999999713704
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 80.52124071098935,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 346.5707058208558
+     },
+     "Flow IAT Std": {
+      "agree_pct": 82.99350969385469,
+      "median_rel_err": 2.250184864168459e-11,
+      "p99_rel_err": 2312.598107212002
+     },
+     "Flow IAT Max": {
+      "agree_pct": 72.6565450320995,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 519.1945079901509
+     },
+     "Flow IAT Min": {
+      "agree_pct": 82.39616470271966,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 41.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 67.48302215281022,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 52.467148425748725,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 63.18063405298496,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 40.22405637733385,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 81.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 91.57204303828257,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 31.0
+     },
+     "Total Backward Packets": {
+      "agree_pct": 82.53682000601665,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 47.923614089212904,
+      "median_rel_err": 0.000517196793379881,
+      "p99_rel_err": 11595.0
+     }
+    }
+   },
+   "first_fin/count/pop": {
+    "mean_agree_pct": 66.453980193045,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 81.51158846082454,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 577.5635228191987
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 89.09337335902147,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 52.300890336868655,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 18.865045087800308
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 35.385609954363034,
+      "median_rel_err": 0.015583019986250543,
+      "p99_rel_err": 2940.7277818747
+     },
+     "Flow Packets/s": {
+      "agree_pct": 81.5098282693157,
+      "median_rel_err": 9.999999748378752e-11,
+      "p99_rel_err": 77.99999999713704
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 80.52124071098935,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 346.5707058208558
+     },
+     "Flow IAT Std": {
+      "agree_pct": 42.50110412012827,
+      "median_rel_err": 0.036375888075275524,
+      "p99_rel_err": 2214.20846468256
+     },
+     "Flow IAT Max": {
+      "agree_pct": 72.6565450320995,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 519.1945079901509
+     },
+     "Flow IAT Min": {
+      "agree_pct": 82.39616470271966,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 41.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 67.48302215281022,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 52.467148425748725,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 63.18063405298496,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 40.22405637733385,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 81.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 91.57204303828257,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 31.0
+     },
+     "Total Backward Packets": {
+      "agree_pct": 82.53682000601665,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 47.923614089212904,
+      "median_rel_err": 0.000517196793379881,
+      "p99_rel_err": 11595.0
+     }
+    }
+   },
+   "first_fin/binary/sample": {
+    "mean_agree_pct": 69.98761465247418,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 81.51158846082454,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 577.5635228191987
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 89.09337335902147,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 52.300890336868655,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 18.865045087800308
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 35.385609954363034,
+      "median_rel_err": 0.015583019986250543,
+      "p99_rel_err": 2940.7277818747
+     },
+     "Flow Packets/s": {
+      "agree_pct": 81.5098282693157,
+      "median_rel_err": 9.999999748378752e-11,
+      "p99_rel_err": 77.99999999713704
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 80.52124071098935,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 346.5707058208558
+     },
+     "Flow IAT Std": {
+      "agree_pct": 82.99350969385469,
+      "median_rel_err": 2.250184864168459e-11,
+      "p99_rel_err": 2312.598107212002
+     },
+     "Flow IAT Max": {
+      "agree_pct": 72.6565450320995,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 519.1945079901509
+     },
+     "Flow IAT Min": {
+      "agree_pct": 82.39616470271966,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 41.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 67.48302215281022,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 52.51323343979825,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 63.18063405298496,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 56.22371714042488,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 91.57204303828257,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 31.0
+     },
+     "Total Backward Packets": {
+      "agree_pct": 82.53682000601665,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 47.923614089212904,
+      "median_rel_err": 0.000517196793379881,
+      "p99_rel_err": 11595.0
+     }
+    }
+   },
+   "first_fin/binary/pop": {
+    "mean_agree_pct": 67.45683930411629,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 81.51158846082454,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 577.5635228191987
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 89.09337335902147,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 2.0
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 52.300890336868655,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 18.865045087800308
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 35.385609954363034,
+      "median_rel_err": 0.015583019986250543,
+      "p99_rel_err": 2940.7277818747
+     },
+     "Flow Packets/s": {
+      "agree_pct": 81.5098282693157,
+      "median_rel_err": 9.999999748378752e-11,
+      "p99_rel_err": 77.99999999713704
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 80.52124071098935,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 346.5707058208558
+     },
+     "Flow IAT Std": {
+      "agree_pct": 42.50110412012827,
+      "median_rel_err": 0.036375888075275524,
+      "p99_rel_err": 2214.20846468256
+     },
+     "Flow IAT Max": {
+      "agree_pct": 72.6565450320995,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 519.1945079901509
+     },
+     "Flow IAT Min": {
+      "agree_pct": 82.39616470271966,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 41.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 67.48302215281022,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 52.51323343979825,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 63.18063405298496,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 56.22371714042488,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 91.57204303828257,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 31.0
+     },
+     "Total Backward Packets": {
+      "agree_pct": 82.53682000601665,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 47.923614089212904,
+      "median_rel_err": 0.000517196793379881,
+      "p99_rel_err": 11595.0
+     }
+    }
+   }
+  },
+  "none": {
+   "extraction": {
+    "packets": 9997874,
+    "used": 9941833,
+    "skipped": {
+     "arp": 46408,
+     "proto_0": 631,
+     "proto_2": 117,
+     "proto_58": 383,
+     "proto_1": 965,
+     "ipv4_fragment": 196,
+     "proto_132": 62
+    },
+    "seconds": 55.5,
+    "first_us": 1499428790315195,
+    "last_us": 1499457761169108
+   },
+   "extracted_flows": 513310,
+   "clock": {
+    "offset_hours": 3,
+    "unique_key_pairs": 292017,
+    "unique_key_pairs_in_window": 291943
+   },
+   "published_in_span": 703245,
+   "matched": 510149,
+   "matched_pct_of_published": 72.54214391854902,
+   "matched_pct_of_extracted": 99.38419278798386,
+   "unmatched_published_by_label": {
+    "BENIGN": 125806,
+    "DDoS": 66485,
+    "Bot": 738,
+    "PortScan": 67
+   },
+   "median_dt_s": 14.6964271068573,
+   "none/count/sample": {
+    "mean_agree_pct": 64.06439589218053,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 71.5332187262937,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5943.522964721806
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 71.64083434447583,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.666666666666667
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 59.07823008572005,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 176.0
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 38.23177150205136,
+      "median_rel_err": 0.09109293621388992,
+      "p99_rel_err": 467.2734087028222
+     },
+     "Flow Packets/s": {
+      "agree_pct": 71.50420759425188,
+      "median_rel_err": 1.200999825456961e-10,
+      "p99_rel_err": 1.0835470611827511
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 70.33807769886837,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 836.598374418509
+     },
+     "Flow IAT Std": {
+      "agree_pct": 69.21291622643581,
+      "median_rel_err": 3.837687804520119e-11,
+      "p99_rel_err": 205336.60067331645
+     },
+     "Flow IAT Max": {
+      "agree_pct": 78.11913774211064,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5225.926533418855
+     },
+     "Flow IAT Min": {
+      "agree_pct": 86.26538521098738,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 71.31328298203073,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 4.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 37.579805115760294,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 4.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 51.89346641863456,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 3.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 37.23421980637029,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 102.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 92.86659387747501,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 62.06695464362851
+     },
+     "Total Backward Packets": {
+      "agree_pct": 74.04660207115961,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 10.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 44.17258487226281,
+      "median_rel_err": 0.0013486176668914363,
+      "p99_rel_err": 11595.0
+     }
+    }
+   },
+   "none/count/pop": {
+    "mean_agree_pct": 62.29947035081908,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 71.5332187262937,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5943.522964721806
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 71.64083434447583,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.666666666666667
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 59.07823008572005,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 176.0
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 38.23177150205136,
+      "median_rel_err": 0.09109293621388992,
+      "p99_rel_err": 467.2734087028222
+     },
+     "Flow Packets/s": {
+      "agree_pct": 71.50420759425188,
+      "median_rel_err": 1.200999825456961e-10,
+      "p99_rel_err": 1.0835470611827511
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 70.33807769886837,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 836.598374418509
+     },
+     "Flow IAT Std": {
+      "agree_pct": 40.97410756465268,
+      "median_rel_err": 0.06061730298515645,
+      "p99_rel_err": 197841.64629901343
+     },
+     "Flow IAT Max": {
+      "agree_pct": 78.11913774211064,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5225.926533418855
+     },
+     "Flow IAT Min": {
+      "agree_pct": 86.26538521098738,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 71.31328298203073,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 4.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 37.579805115760294,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 4.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 51.89346641863456,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 3.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 37.23421980637029,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 102.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 92.86659387747501,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 62.06695464362851
+     },
+     "Total Backward Packets": {
+      "agree_pct": 74.04660207115961,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 10.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 44.17258487226281,
+      "median_rel_err": 0.0013486176668914363,
+      "p99_rel_err": 11595.0
+     }
+    }
+   },
+   "none/binary/sample": {
+    "mean_agree_pct": 64.65864629745428,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 71.5332187262937,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5943.522964721806
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 71.64083434447583,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.666666666666667
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 59.07823008572005,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 176.0
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 38.23177150205136,
+      "median_rel_err": 0.09109293621388992,
+      "p99_rel_err": 467.2734087028222
+     },
+     "Flow Packets/s": {
+      "agree_pct": 71.50420759425188,
+      "median_rel_err": 1.200999825456961e-10,
+      "p99_rel_err": 1.0835470611827511
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 70.33807769886837,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 836.598374418509
+     },
+     "Flow IAT Std": {
+      "agree_pct": 69.21291622643581,
+      "median_rel_err": 3.837687804520119e-11,
+      "p99_rel_err": 205336.60067331645
+     },
+     "Flow IAT Max": {
+      "agree_pct": 78.11913774211064,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5225.926533418855
+     },
+     "Flow IAT Min": {
+      "agree_pct": 86.26538521098738,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 71.59143701153977,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 37.680756014419316,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 1.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 51.89346641863456,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 46.363121362582305,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 1.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 92.86659387747501,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 62.06695464362851
+     },
+     "Total Backward Packets": {
+      "agree_pct": 74.04660207115961,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 10.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 44.17258487226281,
+      "median_rel_err": 0.0013486176668914363,
+      "p99_rel_err": 11595.0
+     }
+    }
+   },
+   "none/binary/pop": {
+    "mean_agree_pct": 62.89372075609283,
+    "columns": {
+     "Flow Duration": {
+      "agree_pct": 71.5332187262937,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5943.522964721806
+     },
+     "Total Fwd Packets": {
+      "agree_pct": 71.64083434447583,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 6.666666666666667
+     },
+     "Total Length of Fwd Packets": {
+      "agree_pct": 59.07823008572005,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 176.0
+     },
+     "Flow Bytes/s": {
+      "agree_pct": 38.23177150205136,
+      "median_rel_err": 0.09109293621388992,
+      "p99_rel_err": 467.2734087028222
+     },
+     "Flow Packets/s": {
+      "agree_pct": 71.50420759425188,
+      "median_rel_err": 1.200999825456961e-10,
+      "p99_rel_err": 1.0835470611827511
+     },
+     "Flow IAT Mean": {
+      "agree_pct": 70.33807769886837,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 836.598374418509
+     },
+     "Flow IAT Std": {
+      "agree_pct": 40.97410756465268,
+      "median_rel_err": 0.06061730298515645,
+      "p99_rel_err": 197841.64629901343
+     },
+     "Flow IAT Max": {
+      "agree_pct": 78.11913774211064,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 5225.926533418855
+     },
+     "Flow IAT Min": {
+      "agree_pct": 86.26538521098738,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "FIN Flag Count": {
+      "agree_pct": 71.59143701153977,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "SYN Flag Count": {
+      "agree_pct": 37.680756014419316,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 1.0
+     },
+     "RST Flag Count": {
+      "agree_pct": 51.89346641863456,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 1.0
+     },
+     "ACK Flag Count": {
+      "agree_pct": 46.363121362582305,
+      "median_rel_err": 1.0,
+      "p99_rel_err": 1.0
+     },
+     "Init_Win_bytes_forward": {
+      "agree_pct": 92.86659387747501,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 62.06695464362851
+     },
+     "Total Backward Packets": {
+      "agree_pct": 74.04660207115961,
+      "median_rel_err": 0.0,
+      "p99_rel_err": 10.0
+     },
+     "Total Length of Bwd Packets": {
+      "agree_pct": 44.17258487226281,
+      "median_rel_err": 0.0013486176668914363,
+      "p99_rel_err": 11595.0
+     }
+    }
+   }
+  }
+ },
+ "chosen_variant": {
+  "fin_mode": "first_fin",
+  "flags": "binary",
+  "iat_std": "sample"
+ },
+ "policy_version": "2.3.0",
+ "model_binding": {
+  "expected_sha256": "b3b60d5a833f449aab1d1ef43c40fd3f74ad20a3b337029b6affc97548ddc29e",
+  "actual_sha256": "b3b60d5a833f449aab1d1ef43c40fd3f74ad20a3b337029b6affc97548ddc29e",
+  "match": true
+ },
+ "ingestor_effect": {
+  "n": 5000,
+  "max_abs_prob_diff": 0.0,
+  "decisions_changed": 0
+ },
+ "model_comparison": {
+  "flows": 624932,
+  "attack_flows": 246017,
+  "ml_alert_agreement_pct": 74.16678934668091,
+  "ml_top_class_agreement_pct": 86.54429601940691,
+  "published": {
+   "recall": {
+    "k": 245985,
+    "n": 246017,
+    "rate": 0.999869927687924,
+    "ci95": [
+     0.9998163816220199,
+     0.9999110289871209
+    ]
+   },
+   "fpr": {
+    "k": 1066,
+    "n": 378915,
+    "rate": 0.0028132958579100854,
+    "ci95": [
+     0.002647143492451968,
+     0.0029871221505780934
+    ]
+   },
+   "naming_on_detected": {
+    "k": 245972,
+    "n": 245985,
+    "rate": 0.9999471512490599,
+    "ci95": [
+     0.9999096287219582,
+     0.9999718599754459
+    ]
+   }
+  },
+  "re_extracted": {
+   "recall": {
+    "k": 84916,
+    "n": 246017,
+    "rate": 0.34516313913266156,
+    "ci95": [
+     0.3432842965385404,
+     0.3470456301390809
+    ]
+   },
+   "fpr": {
+    "k": 1097,
+    "n": 378915,
+    "rate": 0.002895108401620416,
+    "ci95": [
+     0.0027265276650002505,
+     0.003071360693557013
+    ]
+   },
+   "naming_on_detected": {
+    "k": 84523,
+    "n": 84916,
+    "rate": 0.9953718969334401,
+    "ci95": [
+     0.9948921515463418,
+     0.9958173002551308
+    ]
+   }
+  },
+  "per_label": {
+   "BENIGN": {
+    "n": 378915,
+    "published_alert_pct": 0.28132958579100853,
+    "re_extracted_alert_pct": 0.2895108401620416
+   },
+   "DATA_EXFILTRATION": {
+    "n": 1936,
+    "published_alert_pct": 99.32851239669421,
+    "re_extracted_alert_pct": 47.72727272727273
+   },
+   "DOS": {
+    "n": 85215,
+    "published_alert_pct": 99.99061198145867,
+    "re_extracted_alert_pct": 97.47110250542744
+   },
+   "PORT_SCAN": {
+    "n": 158866,
+    "published_alert_pct": 99.99307592562286,
+    "re_extracted_alert_pct": 0.5866579381365428
+   }
+  },
+  "note": "ML decision only (s_attack >= tau); Friday rows are partly in the v2 training split"
+ }
+}

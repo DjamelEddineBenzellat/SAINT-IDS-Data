@@ -1,0 +1,9 @@
+{
+ "fin_mode": "fin_existing",
+ "flags": "cicv3b",
+ "iat_std": "sample",
+ "payload": "frame",
+ "timeout_s": 120.0,
+ "chosen_by": "c12_e0.py",
+ "repo_commit": "1b1a94800dd452a24401885b80d8b4b263343b4e"
+}

@@ -1,0 +1,472 @@
+[
+ {
+  "file": "evaluation_r1/classification_v2_training_report.json",
+  "paper": "Section 5.1, Table 5, Figures 3-5",
+  "sha256": "8880e96955a392d0f11a37040207fc5ee4a922edbf83c165edee7271ffac6471"
+ },
+ {
+  "file": "evaluation_r1/threshold_test_eval_tau_0.25.json",
+  "paper": "Section 6.3 (alert threshold on the test split)",
+  "sha256": "41deb9a4c95bae906516a3485e56ca8521446e89955e4e1297e28655a41eb1ba"
+ },
+ {
+  "file": "evaluation_r1/threshold_tune_meta.json",
+  "paper": "Table 4 (cost ratio and threshold, tune split)",
+  "sha256": "450860aef465d7b2ad9028c9baea8fa3e4a3d6786c706659da48b69c1246fa1e"
+ },
+ {
+  "file": "evaluation_r1/ckks_benchmarks_tenseal.json",
+  "paper": "Table 7 (real CKKS cost)",
+  "sha256": "5c9625ee2ade9245c0d0f2a72a76a3ff1eaf0c4f57e393606432db3e6c5ced7d"
+ },
+ {
+  "file": "evaluation_r1/latency_stages_run1.json",
+  "paper": "Table 8 (per-stage latency, deployed code)",
+  "sha256": "e9c0632b716172d8be43c2b0f82ac7787c146c49fe3c5154f4fa776635450a86"
+ },
+ {
+  "file": "evaluation_r1/latency_stages_run2.json",
+  "paper": "Table 8",
+  "sha256": "a28f73325440e213ea1df5906f4a834d8d080a3d83e264acdb44e1204b698735"
+ },
+ {
+  "file": "evaluation_r1/latency_stages_run3.json",
+  "paper": "Table 8",
+  "sha256": "0cddfa5376ac3570a38ac1214d85db60a7b68bfef619b77ca6866e4245293140"
+ },
+ {
+  "file": "evaluation_r1/latency_stages_default_onnx_run1.json",
+  "paper": "Section 5.2 (default ONNX Runtime session options)",
+  "sha256": "a3bcbb45b339fe3cc405936cafdd65c334f398ffd58801364e1abc67e038f8d2"
+ },
+ {
+  "file": "evaluation_r1/latency_stages_default_onnx_run2.json",
+  "paper": "Section 5.2",
+  "sha256": "2d4a13df0da3c28d519fa1d46839f5b4a4e13f1baa672f384037a9b51e587d6a"
+ },
+ {
+  "file": "evaluation_r1/latency_stages_default_onnx_run3.json",
+  "paper": "Section 5.2",
+  "sha256": "7413714c84d45bd3795f14afc826692bb1cae885f08324afb8211d1f3cada630"
+ },
+ {
+  "file": "evaluation_r1/latency_stages_summary.json",
+  "paper": "Table 8, Section 5.2 (medians of 3 runs)",
+  "sha256": "ff5d0f5973ff3abd2666afae8f1efaa589e623478b14eaa7bc3f7c2d047c442d"
+ },
+ {
+  "file": "evaluation_r1/load_test_http.json",
+  "paper": "Table 9 (full system over HTTP)",
+  "sha256": "bce5b70fe81188e4737d3661d8c7862dd44607f512162f09c751e5b386f18034"
+ },
+ {
+  "file": "evaluation_r1/load_test_components_first_series.json",
+  "paper": "Table 14 (component cost), first load series",
+  "sha256": "2fcf38849cb4277d77594802ef61b9083af3141f7bec5059a27acb723331beb5"
+ },
+ {
+  "file": "evaluation_r1/components_in_process.json",
+  "paper": "Table 14 footnote (in-process cost)",
+  "sha256": "698e493f57baddde4aa18b26293ec93cca42cd2626506210e8b7f0e1b19c8dfc"
+ },
+ {
+  "file": "evaluation_r1/scaling_diagnostic.json",
+  "paper": "Section 6.5 (scaling)",
+  "sha256": "926d02da4b48a50f561c3a143daa0027f8cb64d1e4c97f3b5573b310fdab3aef"
+ },
+ {
+  "file": "evaluation_r1/isolation_forest_known_attacks.json",
+  "paper": "Table 15 (Isolation Forest, known attacks)",
+  "sha256": "e6208671e3c23fcef5c6f460a1cbc6770a01edbc03ebdd667771b1d8eb430056"
+ },
+ {
+  "file": "evaluation_r1/isolation_forest_unseen_classes.json",
+  "paper": "Table 16 (unseen attack classes)",
+  "sha256": "9671efd03c21283f7ece0d214d354945087730ced6b51749510ae56f679b02a9"
+ },
+ {
+  "file": "evaluation_r1/shap_method_comparison.json",
+  "paper": "Section 4.4",
+  "sha256": "815ce893a404fd16d2e9517353faadebacd83eddf509b084103fd903ac2832f6"
+ },
+ {
+  "file": "evaluation_r1/privacy_residual_risk.json",
+  "paper": "Table 10 (residual re-identification risk)",
+  "sha256": "9264b44abbdf6d88435cebef44ef4d25f395beab7b634bfb4a2e6ad478077511"
+ },
+ {
+  "file": "evaluation_r1/content_attack_recall.json",
+  "paper": "Table 17 (content-type attacks)",
+  "sha256": "cbb0c65059a7109b50da55945a2da930f292d89fdb27853b524a4347d2a82d60"
+ },
+ {
+  "file": "evaluation_r1/ciciomt2024_extractor_validation.json",
+  "paper": "Section 6.7 (flow extractor validation)",
+  "sha256": "a1492a06d68129555445a66dbcade84117056150c19a6212b7ec1b6a391493d4"
+ },
+ {
+  "file": "evaluation_r1/ciciomt2024_extractor_config.json",
+  "paper": "Section 6.7",
+  "sha256": "5718c83592bd660bb6aa7bd93e62302ff2fc9b41e391671f7c33c106a945b0f7"
+ },
+ {
+  "file": "evaluation_r1/ciciomt2024_deployed_detector.json",
+  "paper": "Tables 11-12 (false alarms, detection and naming)",
+  "sha256": "90e913e0ba2f4e3c13658729d6aa430347cccb653659f01900ac0a99fb3a9e74"
+ },
+ {
+  "file": "evaluation_r1/ciciomt2024_retrained_models.json",
+  "paper": "Table 13 (retrained research models)",
+  "sha256": "d661696a0e62aff090f9bab79875cdf0f5462a343e9bb0dc7b0f28bb833ea46b"
+ },
+ {
+  "file": "figures_r1/table4_feature_importance_v2.json",
+  "paper": "Table 6",
+  "sha256": "f5723f4096788971fd2a1b045dd155b79e4b5cae0611da88cb24a12cc8958ba8"
+ },
+ {
+  "file": "figures_r1/training_curves_v2.json",
+  "paper": "Figure 5",
+  "sha256": "37a0484910e0b4b8888b9aec6b235ecf7cff325ee616ff969da72e7b7fc5831b"
+ },
+ {
+  "file": "figures_r1/figure1_r1.pdf",
+  "paper": "Figure 1",
+  "sha256": "d9a59212a25c303c571332b1344255e2972115217bbd66c291127ccc8e2d251d"
+ },
+ {
+  "file": "figures_r1/figure2_r1.pdf",
+  "paper": "Figure 2",
+  "sha256": "77b1c34e3c71ef901acf4ac41c9fb82f69b01a101b026794c87e7b2cc0d03910"
+ },
+ {
+  "file": "figures_r1/confusion_matrix_v2.pdf",
+  "paper": "Figure 3",
+  "sha256": "0c37ee4a825233f27a95897f0dc09edc45ef9ccca8cf1faa8ab989dddd27515d"
+ },
+ {
+  "file": "figures_r1/per_class_metrics_v2.pdf",
+  "paper": "Figure 4",
+  "sha256": "0ee605c3da66fae4dcd9c8028800cafb747c758ab50f8d8ed165a08680739014"
+ },
+ {
+  "file": "figures_r1/training_curves_v2.pdf",
+  "paper": "Figure 5",
+  "sha256": "1736532b28f88a79f9560e2871787f7a8a90c29a53da2b8bc518a15e31bd6d1f"
+ },
+ {
+  "file": "scripts_r1/analysis/b1_comment8_audit.py",
+  "paper": "analysis script",
+  "sha256": "7c3edd21df4ff041bebc7d9e8c72e6f9643cc62a20e16dc0d6032379cef7d07f"
+ },
+ {
+  "file": "scripts_r1/analysis/b2_comment6_audit.py",
+  "paper": "analysis script",
+  "sha256": "ce71f62dbb762573cfc33173ebe7c3253bb1c50852f4dd9b3a2525b68324f612"
+ },
+ {
+  "file": "scripts_r1/analysis/c10_ckks_bench.py",
+  "paper": "analysis script",
+  "sha256": "7c1f3e6ec152249c1a628aaa2581d854048ce7ec9b44911e27e17522adfa106b"
+ },
+ {
+  "file": "scripts_r1/analysis/c11_linkage.py",
+  "paper": "analysis script",
+  "sha256": "067a10ce000d770079312a6ab4161dfc3d0c210ea4d0bff3e5dc0693eb8a1c3d"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_common.py",
+  "paper": "analysis script",
+  "sha256": "84b1cdb701e060bef340f2ebaff63a87ef05f5d0192345164c3a1c25f387f41a"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_e0.py",
+  "paper": "analysis script",
+  "sha256": "73cf2c196c0471e723f9bc7ff81548b460d0a79f67fece4127ab245fa9e73401"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_e0b.py",
+  "paper": "analysis script",
+  "sha256": "cbc003d0fbd4efa2287719d1ddf76a8518aed2884662ff415e7dbfdb86a99085"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_e1.py",
+  "paper": "analysis script",
+  "sha256": "23f6fb5302bdfbb7cbcd282c296e850c4ba9af231ef35123301463ada871769f"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_e1_diag.py",
+  "paper": "analysis script",
+  "sha256": "a1c64b363501546c892c03e8231a0bcc7bb9bb875e6c009667cabe8de6f36b30"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_e1b.py",
+  "paper": "analysis script",
+  "sha256": "c18a2c314f1a07374e4835aec318dc5f3cac8566c64c661e0cab1ea89b089d85"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_flowmeter.py",
+  "paper": "analysis script",
+  "sha256": "2a3c7c11acd1f16d9b467d78e95e147a16cc534377d5cac0fc40389000aecb48"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_inventory.py",
+  "paper": "analysis script",
+  "sha256": "171e774abadbf5d002e6d6fdfc23a8223012692ce1a07a5e39a925479a05368b"
+ },
+ {
+  "file": "scripts_r1/analysis/c12_selftest.py",
+  "paper": "analysis script",
+  "sha256": "077183d3bc05d4e3123f008f4c6342c64926d4879dda0be8017babe3d2835454"
+ },
+ {
+  "file": "scripts_r1/analysis/c1_policy_harness.py",
+  "paper": "analysis script",
+  "sha256": "b325cd7d0325008b8ccb15ca40dc0d75fd6adec61adcff60ed9d3fc0e275a709"
+ },
+ {
+  "file": "scripts_r1/analysis/c2_threshold_sweep.py",
+  "paper": "analysis script",
+  "sha256": "959df9a13656957f34b69501ededb49fce9886a619a2b2b108a5ab8d761c2e77"
+ },
+ {
+  "file": "scripts_r1/analysis/c3_healthcare_replay_cprime.py",
+  "paper": "analysis script",
+  "sha256": "4580edea24640241563a71b45bfb57f2f4ce09517a5811cb7a29c2f2a7d3feb4"
+ },
+ {
+  "file": "scripts_r1/analysis/c3_rawlabel_recall.py",
+  "paper": "analysis script",
+  "sha256": "36e2418ac8cab04c1f57f5300144d522f662ea0305f7caaa27505d4185b2a4f5"
+ },
+ {
+  "file": "scripts_r1/analysis/c4_comment8_v1_vs_v2.py",
+  "paper": "analysis script",
+  "sha256": "1b6f8dd2ed05950ba226de94c310d0f20aca329f45c22942848fbd91c7573d8a"
+ },
+ {
+  "file": "scripts_r1/analysis/c5_threshold_sweep_v2.py",
+  "paper": "analysis script",
+  "sha256": "d144ebf625065385ff09eead4450b5c0d381e87e650e3b2179e7d524b7a007e1"
+ },
+ {
+  "file": "scripts_r1/analysis/c6_healthcare_replay_v2.py",
+  "paper": "analysis script",
+  "sha256": "7235a92b25bb8952d2ba7b50f89c607bc5cb34310178a2497b02d59231408928"
+ },
+ {
+  "file": "scripts_r1/analysis/c7_latency_v2.py",
+  "paper": "analysis script",
+  "sha256": "d44f22819d519a3cab63f25e260756cb2d25ce04c243380252d4ffb62caa983d"
+ },
+ {
+  "file": "scripts_r1/analysis/c8_step1_evidence.py",
+  "paper": "analysis script",
+  "sha256": "2b5cc3d087fccb8a7c0a0e2f19f501230444d4bba16e5b96208b16d81a0613da"
+ },
+ {
+  "file": "scripts_r1/analysis/c9_latency_e4.py",
+  "paper": "analysis script",
+  "sha256": "9b1fcf71726700384d386b9be9e3d924d5371a02b6f6c9dd103dcb95240323d4"
+ },
+ {
+  "file": "scripts_r1/analysis/diag_app.py",
+  "paper": "analysis script",
+  "sha256": "829c6e37844a1d8bac5b9d385dc0d734f46add63f3d6f0ccbef4ad7a46064bf8"
+ },
+ {
+  "file": "scripts_r1/analysis/diag_b.py",
+  "paper": "analysis script",
+  "sha256": "bdec4e33b0a62e5b2be6d57bbc02eae8a28ced2a5fb937334bb29bee99a2525c"
+ },
+ {
+  "file": "scripts_r1/analysis/hw_monitor.sh",
+  "paper": "analysis script",
+  "sha256": "b9b1b66e383d89cb3773a56f1f2fc5e8f191869b653b5699b3332614a7f3d14a"
+ },
+ {
+  "file": "scripts_r1/analysis/stage_latency_r1.py",
+  "paper": "analysis script",
+  "sha256": "36fd02c725554bbacde4b66657fe213b514d66e2ee43238394b9e431c659b129"
+ },
+ {
+  "file": "scripts_r1/analysis/stage_r1_analysis.py",
+  "paper": "analysis script",
+  "sha256": "fdfc011c7bffbd954dae1ef9d4e5214ecdb57064c586d6f2567e2fe8d60d4cc0"
+ },
+ {
+  "file": "scripts_r1/analysis/thermal_guard.sh",
+  "paper": "analysis script",
+  "sha256": "1b92130dfb58d5c8eadb96aff34bca501ac79fce5b9a7990401dc28fa88d6c91"
+ },
+ {
+  "file": "scripts_r1/analysis/x2_app.py",
+  "paper": "analysis script",
+  "sha256": "274cede89d7156fe59e4fcaaaf242a3d28a0f53cd5df1315a0ddd9895104e5e4"
+ },
+ {
+  "file": "scripts_r1/analysis/x2_load.py",
+  "paper": "analysis script",
+  "sha256": "97f0ee5622391e364c323ca55f7c6d5835ec4cb0a3990c7d50efb15047765bc1"
+ },
+ {
+  "file": "scripts_r1/analysis/x2_receiver.py",
+  "paper": "analysis script",
+  "sha256": "ed2fb2305894b9e86ab4594f773834b05dacf448c94de8ea9979b64d4701c935"
+ },
+ {
+  "file": "scripts_r1/analysis/x2_run.py",
+  "paper": "analysis script",
+  "sha256": "cbe7a1081ceb50d19352232c8612562c4d2aacd968d4bab91954903295f0fd30"
+ },
+ {
+  "file": "scripts_r1/analysis/x3_offline.py",
+  "paper": "analysis script",
+  "sha256": "996b4456e4f501d9a9bc9eb5b158bd7af83d79a97a841a57e3b81bebf254a49e"
+ },
+ {
+  "file": "scripts_r1/run/v2/run_v2.sh",
+  "paper": "analysis script",
+  "sha256": "7eaf4eea285a59ebcce679cbbc95028798ba1e90f73a009c296b88f9b1b9c8f1"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_e0b.sh",
+  "paper": "analysis script",
+  "sha256": "7cdb5c8362111d5b62838822a2a6ae9f7e022c5b8d7c198c7cbe675d50c076c4"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_e0c.sh",
+  "paper": "analysis script",
+  "sha256": "6f1e90a58baca0030d1287e56994ff548bd90286ff54bc19fc23a452eefe2506"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_e0d.sh",
+  "paper": "analysis script",
+  "sha256": "8e11c4f69e84a9ee6d531fb84a9006cb1be05008df141680e89789e3a6f23827"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_e1_diag.sh",
+  "paper": "analysis script",
+  "sha256": "a91b3267f560ada94c6b9b4921d9fb889a42330264e70324ae1a4d2902e6985b"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_e1_rescore.sh",
+  "paper": "analysis script",
+  "sha256": "bbe6d970ea9f4f81d5c6be4421fbf260a46e00fd387d0d4a00642dba2d96e86c"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_e1b.sh",
+  "paper": "analysis script",
+  "sha256": "289e668fa2c2fe1e0c8cd2003ee6e3c7337a1c52ca9db2b8765535936e8dd0b0"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_inventory.sh",
+  "paper": "analysis script",
+  "sha256": "fb4ec00503102a8d8bd663d4ea89e6c694934fce2f636eb8b6240da89441e9f5"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_inventory_test.sh",
+  "paper": "analysis script",
+  "sha256": "ce602215b8b42a9ad8db361a8681232ce9821b5e5aa4863411fc29007e1a1fe1"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_inventory_train.sh",
+  "paper": "analysis script",
+  "sha256": "ede8210389f8a1f70a793f326817c1e759daba62f9bbba78e6cbb425dab64d4b"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_p1.sh",
+  "paper": "analysis script",
+  "sha256": "a6da3d5f9fc6aded9a6aac19241352fb8a6b1baf609ae7e3042b83b7e35612e3"
+ },
+ {
+  "file": "scripts_r1/run/c12_p1/run_p1b.sh",
+  "paper": "analysis script",
+  "sha256": "098132bf4e2e7d2b242b411f072be44c140c217584426582707aca18d364846e"
+ },
+ {
+  "file": "scripts_r1/run/c12_p2/run_c12_p2.sh",
+  "paper": "analysis script",
+  "sha256": "3eeacc177147819b6c6a8d490574532384ecaa3b87187f82613183cc0f87b5ac"
+ },
+ {
+  "file": "scripts_r1/run/c3/run_c3.sh",
+  "paper": "analysis script",
+  "sha256": "3eb153af9cced08a5f9a95bf07b78a331e3572cb9f39e726db4a019f082b1ed9"
+ },
+ {
+  "file": "scripts_r1/run/c9/run_c9.sh",
+  "paper": "analysis script",
+  "sha256": "17e673ec87fc21385dbc3099b6f0774bd4186f4cec1c1b3e006a3d9d1c2e6eff"
+ },
+ {
+  "file": "scripts_r1/run/diag_b/run_diag_b.sh",
+  "paper": "analysis script",
+  "sha256": "55a8b7ee647a20c0a643d1704a2f97b7449439bad317d2050c3881755dc743d9"
+ },
+ {
+  "file": "scripts_r1/run/e4/run_e4.sh",
+  "paper": "analysis script",
+  "sha256": "85d030c0138c85fab0c9dd700a54348988a675437ec0018abca3dd088ef5ec09"
+ },
+ {
+  "file": "scripts_r1/run/latency/run_latency.sh",
+  "paper": "analysis script",
+  "sha256": "1b466d77974f8e89c1ad7574370715c6ee8218a1e0422e608e29fc9450b1da2c"
+ },
+ {
+  "file": "scripts_r1/run/limit_r1/run_limit_r1.sh",
+  "paper": "analysis script",
+  "sha256": "e3384c4919ade11d9e192bfec51602492ffe8fd51627ae32217f6c7042294011"
+ },
+ {
+  "file": "scripts_r1/run/stage_r1/run_stage_r1.sh",
+  "paper": "analysis script",
+  "sha256": "fb142b06cf2547fd33eda0981333331c210d9bbf3a454a2b96f4a0ae0b6e5377"
+ },
+ {
+  "file": "scripts_r1/run/step1/run_step1.sh",
+  "paper": "analysis script",
+  "sha256": "8e9bc8f6181a97c3f2b1f8c0d6af7a309027c84fdb875bb7bbb1ccf9fa7d1111"
+ },
+ {
+  "file": "scripts_r1/run/x1/run_x1.sh",
+  "paper": "analysis script",
+  "sha256": "ec1e9af1954df8466cf129de0c6bb0cae292a5998ecc200194f068f12ec94db8"
+ },
+ {
+  "file": "scripts_r1/run/x2/run_x2.sh",
+  "paper": "analysis script",
+  "sha256": "948931d111b9927aa382051251e3adf8487ff7b4f106b514a21b7589b40921b2"
+ },
+ {
+  "file": "scripts_r1/training/train_pipeline_v2.py",
+  "paper": "analysis script",
+  "sha256": "fdbbb8e3fb81b6642a4b8aec258736ecb448ca7374fbd3c1dae868404cd889f7"
+ },
+ {
+  "file": "scripts_r1/training/dedup.py",
+  "paper": "analysis script",
+  "sha256": "c730730ec36736d1edb653d7cfc111465b3d5281289717256edfca39cf5dd133"
+ },
+ {
+  "file": "scripts_r1/training/configs/v2_dedup.json",
+  "paper": "analysis script",
+  "sha256": "b847b8ff94ec8951a7bc2c7437300db7c07c2846c06f23932c36f3d0b002dc72"
+ },
+ {
+  "file": "scripts_r1/training/verify_v2.py",
+  "paper": "analysis script",
+  "sha256": "e9abbb56919da0f09cd5ce9719aa0664b24ba7149c2875b418eb0392dd49cd85"
+ },
+ {
+  "file": "scripts_r1/figures/generate_figures_r1.py",
+  "paper": "analysis script",
+  "sha256": "77aabf5ddd6bb994a0ef41298c6081fa1539dbc0b0ebd600bb7d05bba4658839"
+ },
+ {
+  "file": "scripts_r1/figures/generate_diagrams_r1.py",
+  "paper": "analysis script",
+  "sha256": "d9f4d80920378d5621fa5b205a173f29fd83e188795f15855b70a1605f731fcf"
+ }
+]

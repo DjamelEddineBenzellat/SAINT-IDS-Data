@@ -1,0 +1,1242 @@
+{
+ "repo_commit": "5db2062eacc97ff00a621f266293edb6671997de",
+ "protocol": "v2_dedup",
+ "trials": 50,
+ "r_cost": 10.0,
+ "extractor": {
+  "fin_mode": "fin_existing",
+  "flags": "cicv3b",
+  "iat_std": "sample",
+  "payload": "frame",
+  "timeout_s": 120.0,
+  "chosen_by": "c12_e0.py",
+  "repo_commit": "1b1a94800dd452a24401885b80d8b4b263343b4e"
+ },
+ "iomt_pool_raw": {
+  "rows": 4144643,
+  "class_counts": {
+   "BENIGN": 43053,
+   "PORT_SCAN": 279060,
+   "BRUTE_FORCE": 0,
+   "MITM": 0,
+   "DOS": 3822530,
+   "DATA_EXFILTRATION": 0,
+   "UNKNOWN": 0
+  },
+  "by_label": {
+   "TCP_IP-DDoS-TCP": 799584,
+   "TCP_IP-DDoS-SYN": 799450,
+   "TCP_IP-DoS-TCP": 798776,
+   "TCP_IP-DoS-SYN": 798715,
+   "MQTT-DDoS-Connect_Flood": 199984,
+   "Recon-Port_Scan": 199591,
+   "TCP_IP-DDoS-UDP": 163042,
+   "MQTT-DoS-Connect_Flood": 115063,
+   "MQTT-DDoS-Publish_Flood": 91406,
+   "Recon-OS_Scan": 73062,
+   "TCP_IP-DoS-UDP": 55846,
+   "BENIGN": 43053,
+   "Recon-VulScan": 6398,
+   "MQTT-DoS-Publish_Flood": 500,
+   "TCP_IP-DDoS-ICMP": 133,
+   "TCP_IP-DoS-ICMP": 31,
+   "Recon-Ping_Sweep": 9
+  }
+ },
+ "iomt_pool_dedup": {
+  "report": {
+   "definition": "exact equality of the 33-float model-input vector",
+   "conflict_policy": "drop",
+   "rows_in": 4144643,
+   "rows_out": 3985035,
+   "redundant_copies_removed": 159237,
+   "conflicting_vectors": 2,
+   "rows_in_conflicting_vectors": 371,
+   "conflicting_vectors_resolved_by_majority": 0,
+   "class_counts_in": {
+    "BENIGN": 43053,
+    "PORT_SCAN": 279060,
+    "BRUTE_FORCE": 0,
+    "MITM": 0,
+    "DOS": 3822530,
+    "DATA_EXFILTRATION": 0,
+    "UNKNOWN": 0
+   },
+   "class_counts_out": {
+    "BENIGN": 42102,
+    "PORT_SCAN": 204238,
+    "BRUTE_FORCE": 0,
+    "MITM": 0,
+    "DOS": 3738695,
+    "DATA_EXFILTRATION": 0,
+    "UNKNOWN": 0
+   },
+   "class_counts_conflict_rows": {
+    "BENIGN": 287,
+    "PORT_SCAN": 1,
+    "BRUTE_FORCE": 0,
+    "MITM": 0,
+    "DOS": 83,
+    "DATA_EXFILTRATION": 0,
+    "UNKNOWN": 0
+   }
+  },
+  "rows": 3985035,
+  "class_counts": {
+   "BENIGN": 42102,
+   "PORT_SCAN": 204238,
+   "BRUTE_FORCE": 0,
+   "MITM": 0,
+   "DOS": 3738695,
+   "DATA_EXFILTRATION": 0,
+   "UNKNOWN": 0
+  }
+ },
+ "iomt_split": {
+  "train": {
+   "rows": 2812965,
+   "class_counts": {
+    "BENIGN": 29719,
+    "PORT_SCAN": 144168,
+    "BRUTE_FORCE": 0,
+    "MITM": 0,
+    "DOS": 2639078,
+    "DATA_EXFILTRATION": 0,
+    "UNKNOWN": 0
+   }
+  },
+  "val": {
+   "rows": 468828,
+   "class_counts": {
+    "BENIGN": 4953,
+    "PORT_SCAN": 24028,
+    "BRUTE_FORCE": 0,
+    "MITM": 0,
+    "DOS": 439847,
+    "DATA_EXFILTRATION": 0,
+    "UNKNOWN": 0
+   }
+  },
+  "tune": {
+   "rows": 703242,
+   "class_counts": {
+    "BENIGN": 7430,
+    "PORT_SCAN": 36042,
+    "BRUTE_FORCE": 0,
+    "MITM": 0,
+    "DOS": 659770,
+    "DATA_EXFILTRATION": 0,
+    "UNKNOWN": 0
+   }
+  }
+ },
+ "test_rows_identical_to_iomt_training_vectors": {
+  "attack": 40054,
+  "benign": 1742,
+  "attack_flows": 1206581,
+  "benign_flows": 96825
+ },
+ "M1_training": {
+  "device": "cpu",
+  "timings_s": {
+   "baseline": 34.3,
+   "optuna": 783.2,
+   "final_refit": 9.8
+  },
+  "baseline_val_f1_weighted": 0.9999296521718549,
+  "optuna_resume": {
+   "completed_before_this_session": 0,
+   "run_this_session": 50
+  },
+  "optuna_best_params": {
+   "max_depth": 8,
+   "learning_rate": 0.18787462233248275,
+   "n_estimators": 363,
+   "num_leaves": 118,
+   "min_child_samples": 39,
+   "subsample": 0.8996261720892436,
+   "colsample_bytree": 0.7495646928958491
+  },
+  "optuna_best_val_f1": 0.9999445603157,
+  "refit_check": {
+   "n_estimators_used": 59,
+   "n_estimators_searched": 363,
+   "best_trial_val_f1": 0.9999445603157,
+   "refit_val_f1": 0.9999680207352707,
+   "ok": true
+  },
+  "lgbm_params": {
+   "objective": "multiclass",
+   "class_weight": "balanced",
+   "random_state": 42,
+   "n_jobs": -1,
+   "verbose": -1,
+   "deterministic": true,
+   "force_col_wise": true,
+   "max_depth": 8,
+   "learning_rate": 0.18787462233248275,
+   "n_estimators": 59,
+   "num_leaves": 118,
+   "min_child_samples": 39,
+   "subsample": 0.8996261720892436,
+   "colsample_bytree": 0.7495646928958491
+  },
+  "n_trials_completed": 50,
+  "balancing": "balance_classes (train only)",
+  "rows_train_balanced": 2812965,
+  "rows_train": 2812965,
+  "rows_val": 468828,
+  "classes": [
+   0,
+   1,
+   4
+  ],
+  "seconds": 827.9
+ },
+ "M1_tau": {
+  "tau": 0.001,
+  "cost": 109.0,
+  "tune_fn": 3,
+  "tune_fp": 79,
+  "r": 10.0
+ },
+ "M2_iomt_rows_identical_to_a_cicids_vector": 57,
+ "M2_training": {
+  "device": "cpu",
+  "timings_s": {
+   "baseline": 118.8,
+   "optuna": 5747.8,
+   "final_refit": 131.0
+  },
+  "baseline_val_f1_weighted": 0.9993487628789763,
+  "optuna_resume": {
+   "completed_before_this_session": 0,
+   "run_this_session": 50
+  },
+  "optuna_best_params": {
+   "max_depth": 10,
+   "learning_rate": 0.06046357691836938,
+   "n_estimators": 456,
+   "num_leaves": 81,
+   "min_child_samples": 42,
+   "subsample": 0.7960917683898575,
+   "colsample_bytree": 0.8055958966448205
+  },
+  "optuna_best_val_f1": 0.9994655279999924,
+  "refit_check": {
+   "n_estimators_used": 294,
+   "n_estimators_searched": 456,
+   "best_trial_val_f1": 0.9994655279999924,
+   "refit_val_f1": 0.9995604154222345,
+   "ok": true
+  },
+  "lgbm_params": {
+   "objective": "multiclass",
+   "class_weight": "balanced",
+   "random_state": 42,
+   "n_jobs": -1,
+   "verbose": -1,
+   "deterministic": true,
+   "force_col_wise": true,
+   "max_depth": 10,
+   "learning_rate": 0.06046357691836938,
+   "n_estimators": 294,
+   "num_leaves": 81,
+   "min_child_samples": 42,
+   "subsample": 0.7960917683898575,
+   "colsample_bytree": 0.8055958966448205
+  },
+  "n_trials_completed": 50,
+  "balancing": "balance_classes (train only)",
+  "rows_train_balanced": 4272160,
+  "rows_train": 4272160,
+  "rows_val": 712028,
+  "classes": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "seconds": 6006.1
+ },
+ "M2_tau": {
+  "tau": 0.133,
+  "cost": 1226.0,
+  "tune_fn": 49,
+  "tune_fp": 736,
+  "r": 10.0
+ },
+ "evaluation": {
+  "M0": {
+   "iomt_test_at_own_tau": {
+    "tau": 0.25,
+    "benign": {
+     "flows": 96825,
+     "alerts": 8,
+     "rate": 8.262328943971082e-05,
+     "ci95": [
+      3.567152518799823e-05,
+      0.00016279429174667146
+     ],
+     "hours": 92.68527542054653,
+     "per_hour": 0.08631360228149632
+    },
+    "attack": {
+     "flows": 1206581,
+     "detected": 4229,
+     "detected_weighted": 0.0012280322400111028,
+     "naming": {
+      "k": 4149,
+      "n": 4229
+     }
+    },
+    "per_label": {
+     "MQTT-DDoS-Connect_Flood": {
+      "flows": 199973,
+      "detected_pct": 0.0005000675091137304,
+      "naming_pct": 0.0,
+      "named_as": {
+       "PORT_SCAN": 1
+      }
+     },
+     "MQTT-DDoS-Publish_Flood": {
+      "flows": 2767,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "MQTT-DoS-Connect_Flood": {
+      "flows": 28105,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "MQTT-DoS-Publish_Flood": {
+      "flows": 168,
+      "detected_pct": 47.023809523809526,
+      "naming_pct": 0.0,
+      "named_as": {
+       "MITM": 79
+      }
+     },
+     "MQTT-Malformed_Data": {
+      "flows": 804,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "Recon-OS_Scan": {
+      "flows": 16367,
+      "detected_pct": 10.007942811755361,
+      "naming_pct": 100.0,
+      "named_as": {
+       "PORT_SCAN": 1638
+      }
+     },
+     "Recon-Ping_Sweep": {
+      "flows": 9,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "Recon-Port_Scan": {
+      "flows": 107106,
+      "detected_pct": 2.3173304950236213,
+      "naming_pct": 100.0,
+      "named_as": {
+       "PORT_SCAN": 2482
+      }
+     },
+     "Recon-VulScan": {
+      "flows": 2156,
+      "detected_pct": 1.3450834879406308,
+      "naming_pct": 100.0,
+      "named_as": {
+       "PORT_SCAN": 29
+      }
+     },
+     "TCP_IP-DDoS-ICMP1": {
+      "flows": 12,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DDoS-ICMP2": {
+      "flows": 20,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DDoS-SYN": {
+      "flows": 199591,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DDoS-TCP": {
+      "flows": 199801,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DDoS-UDP1": {
+      "flows": 20744,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DDoS-UDP2": {
+      "flows": 15609,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DoS-ICMP": {
+      "flows": 6,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DoS-SYN": {
+      "flows": 199767,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DoS-TCP": {
+      "flows": 199825,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "TCP_IP-DoS-UDP": {
+      "flows": 13751,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     }
+    },
+    "runs_detected": 5,
+    "runs": 19
+   },
+   "cicids_v2_test_at_own_tau": {
+    "tau": 0.25,
+    "TP": 63699,
+    "FP": 432,
+    "TN": 300625,
+    "FN": 44
+   },
+   "classes": [
+    "BENIGN",
+    "PORT_SCAN",
+    "BRUTE_FORCE",
+    "MITM",
+    "DOS",
+    "DATA_EXFILTRATION"
+   ],
+   "gates_iomt_test": {
+    "f1_weighted": 0.016482745350251734,
+    "f1_weighted_gt_0_95": false,
+    "fpr": 8.262328943971082e-05,
+    "fpr_lt_0_02": true,
+    "port_scan_recall": 0.03302344831977586,
+    "dos_recall": 0.0,
+    "port_scan_recall_gt_0_90": false,
+    "dos_recall_gt_0_90": false
+   }
+  },
+  "M1": {
+   "iomt_test_at_own_tau": {
+    "tau": 0.001,
+    "benign": {
+     "flows": 96825,
+     "alerts": 5635,
+     "rate": 0.05819777949909631,
+     "ci95": [
+      0.056731221686681425,
+      0.0596908722654725
+     ],
+     "hours": 92.68527542054653,
+     "per_hour": 60.79714360702897
+    },
+    "attack": {
+     "flows": 1206581,
+     "detected": 1206547,
+     "detected_weighted": 0.9999891992899145,
+     "naming": {
+      "k": 1195271,
+      "n": 1205754
+     }
+    },
+    "per_label": {
+     "MQTT-DDoS-Connect_Flood": {
+      "flows": 199973,
+      "detected_pct": 99.99949993249089,
+      "naming_pct": 99.9994999299902,
+      "named_as": {
+       "PORT_SCAN": 1,
+       "DOS": 199971
+      }
+     },
+     "MQTT-DDoS-Publish_Flood": {
+      "flows": 2767,
+      "detected_pct": 99.85543910372245,
+      "naming_pct": 99.92761491132826,
+      "named_as": {
+       "PORT_SCAN": 2,
+       "DOS": 2761
+      }
+     },
+     "MQTT-DoS-Connect_Flood": {
+      "flows": 28105,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 28105
+      }
+     },
+     "MQTT-DoS-Publish_Flood": {
+      "flows": 168,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 168
+      }
+     },
+     "MQTT-Malformed_Data": {
+      "flows": 804,
+      "detected_pct": 98.6318407960199,
+      "naming_pct": null,
+      "named_as": {
+       "DOS": 793
+      }
+     },
+     "Recon-OS_Scan": {
+      "flows": 16367,
+      "detected_pct": 100.0,
+      "naming_pct": 99.73727622655343,
+      "named_as": {
+       "PORT_SCAN": 16324,
+       "DOS": 43
+      }
+     },
+     "Recon-Ping_Sweep": {
+      "flows": 9,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "Recon-Port_Scan": {
+      "flows": 107106,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "PORT_SCAN": 107106
+      }
+     },
+     "Recon-VulScan": {
+      "flows": 2156,
+      "detected_pct": 99.860853432282,
+      "naming_pct": 99.86065954482119,
+      "named_as": {
+       "PORT_SCAN": 2150,
+       "DOS": 3
+      }
+     },
+     "TCP_IP-DDoS-ICMP1": {
+      "flows": 12,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 12
+      }
+     },
+     "TCP_IP-DDoS-ICMP2": {
+      "flows": 20,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20
+      }
+     },
+     "TCP_IP-DDoS-SYN": {
+      "flows": 199591,
+      "detected_pct": 100.0,
+      "naming_pct": 94.77230937266711,
+      "named_as": {
+       "PORT_SCAN": 10434,
+       "DOS": 189157
+      }
+     },
+     "TCP_IP-DDoS-TCP": {
+      "flows": 199801,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199801
+      }
+     },
+     "TCP_IP-DDoS-UDP1": {
+      "flows": 20744,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20744
+      }
+     },
+     "TCP_IP-DDoS-UDP2": {
+      "flows": 15609,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 15609
+      }
+     },
+     "TCP_IP-DoS-ICMP": {
+      "flows": 6,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 6
+      }
+     },
+     "TCP_IP-DoS-SYN": {
+      "flows": 199767,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199767
+      }
+     },
+     "TCP_IP-DoS-TCP": {
+      "flows": 199825,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199825
+      }
+     },
+     "TCP_IP-DoS-UDP": {
+      "flows": 13751,
+      "detected_pct": 99.95636680968657,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 13745
+      }
+     }
+    },
+    "runs_detected": 18,
+    "runs": 19
+   },
+   "iomt_test_at_0.25": {
+    "tau": 0.25,
+    "benign": {
+     "flows": 96825,
+     "alerts": 1124,
+     "rate": 0.01160857216627937,
+     "ci95": [
+      0.010943373157457836,
+      0.012303264189695316
+     ],
+     "hours": 92.68527542054653,
+     "per_hour": 12.127061120550232
+    },
+    "attack": {
+     "flows": 1206581,
+     "detected": 1204381,
+     "detected_weighted": 0.9972935942807081,
+     "naming": {
+      "k": 1194931,
+      "n": 1203601
+     }
+    },
+    "per_label": {
+     "MQTT-DDoS-Connect_Flood": {
+      "flows": 199973,
+      "detected_pct": 99.99099878483595,
+      "naming_pct": 99.99949988747468,
+      "named_as": {
+       "PORT_SCAN": 1,
+       "DOS": 199954
+      }
+     },
+     "MQTT-DDoS-Publish_Flood": {
+      "flows": 2767,
+      "detected_pct": 92.73581496205277,
+      "naming_pct": 99.92205767731879,
+      "named_as": {
+       "PORT_SCAN": 2,
+       "DOS": 2564
+      }
+     },
+     "MQTT-DoS-Connect_Flood": {
+      "flows": 28105,
+      "detected_pct": 99.64419142501335,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 28005
+      }
+     },
+     "MQTT-DoS-Publish_Flood": {
+      "flows": 168,
+      "detected_pct": 94.64285714285714,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 159
+      }
+     },
+     "MQTT-Malformed_Data": {
+      "flows": 804,
+      "detected_pct": 97.01492537313433,
+      "naming_pct": null,
+      "named_as": {
+       "DOS": 780
+      }
+     },
+     "Recon-OS_Scan": {
+      "flows": 16367,
+      "detected_pct": 99.99389014480357,
+      "naming_pct": 99.74337040205303,
+      "named_as": {
+       "PORT_SCAN": 16324,
+       "DOS": 42
+      }
+     },
+     "Recon-Ping_Sweep": {
+      "flows": 9,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "Recon-Port_Scan": {
+      "flows": 107106,
+      "detected_pct": 99.99906634548952,
+      "naming_pct": 100.0,
+      "named_as": {
+       "PORT_SCAN": 107105
+      }
+     },
+     "Recon-VulScan": {
+      "flows": 2156,
+      "detected_pct": 99.72170686456401,
+      "naming_pct": 99.90697674418605,
+      "named_as": {
+       "PORT_SCAN": 2148,
+       "DOS": 2
+      }
+     },
+     "TCP_IP-DDoS-ICMP1": {
+      "flows": 12,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 12
+      }
+     },
+     "TCP_IP-DDoS-ICMP2": {
+      "flows": 20,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20
+      }
+     },
+     "TCP_IP-DDoS-SYN": {
+      "flows": 199591,
+      "detected_pct": 99.08613113817756,
+      "naming_pct": 95.63981857438299,
+      "named_as": {
+       "PORT_SCAN": 8623,
+       "DOS": 189144
+      }
+     },
+     "TCP_IP-DDoS-TCP": {
+      "flows": 199801,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199801
+      }
+     },
+     "TCP_IP-DDoS-UDP1": {
+      "flows": 20744,
+      "detected_pct": 99.99517932896259,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20743
+      }
+     },
+     "TCP_IP-DDoS-UDP2": {
+      "flows": 15609,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 15609
+      }
+     },
+     "TCP_IP-DoS-ICMP": {
+      "flows": 6,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 6
+      }
+     },
+     "TCP_IP-DoS-SYN": {
+      "flows": 199767,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199767
+      }
+     },
+     "TCP_IP-DoS-TCP": {
+      "flows": 199825,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199825
+      }
+     },
+     "TCP_IP-DoS-UDP": {
+      "flows": 13751,
+      "detected_pct": 99.95636680968657,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 13745
+      }
+     }
+    },
+    "runs_detected": 18,
+    "runs": 19
+   },
+   "cicids_v2_test_at_own_tau": {
+    "tau": 0.001,
+    "TP": 20709,
+    "FP": 38548,
+    "TN": 262509,
+    "FN": 43034
+   },
+   "cicids_v2_test_at_0.25": {
+    "tau": 0.25,
+    "TP": 12419,
+    "FP": 10034,
+    "TN": 291023,
+    "FN": 51324
+   },
+   "classes": [
+    "BENIGN",
+    "PORT_SCAN",
+    "DOS"
+   ],
+   "gates_iomt_test": {
+    "f1_weighted": 0.9908554081518799,
+    "f1_weighted_gt_0_95": true,
+    "fpr": 0.009966434288665118,
+    "fpr_lt_0_02": true,
+    "port_scan_recall": 0.9995065187284102,
+    "dos_recall": 0.989805941642696,
+    "port_scan_recall_gt_0_90": true,
+    "dos_recall_gt_0_90": true
+   }
+  },
+  "M2": {
+   "iomt_test_at_own_tau": {
+    "tau": 0.133,
+    "benign": {
+     "flows": 96825,
+     "alerts": 1415,
+     "rate": 0.01461399431964885,
+     "ci95": [
+      0.013867536038001295,
+      0.015389732733170217
+     ],
+     "hours": 92.68527542054653,
+     "per_hour": 15.266718403539661
+    },
+    "attack": {
+     "flows": 1206581,
+     "detected": 1205276,
+     "detected_weighted": 0.9982600839977325,
+     "naming": {
+      "k": 1195188,
+      "n": 1204483
+     }
+    },
+    "per_label": {
+     "MQTT-DDoS-Connect_Flood": {
+      "flows": 199973,
+      "detected_pct": 99.99199891985417,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199957
+      }
+     },
+     "MQTT-DDoS-Publish_Flood": {
+      "flows": 2767,
+      "detected_pct": 99.42175641488977,
+      "naming_pct": 99.63649581970193,
+      "named_as": {
+       "PORT_SCAN": 10,
+       "DOS": 2741
+      }
+     },
+     "MQTT-DoS-Connect_Flood": {
+      "flows": 28105,
+      "detected_pct": 99.97509339975093,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 28098
+      }
+     },
+     "MQTT-DoS-Publish_Flood": {
+      "flows": 168,
+      "detected_pct": 83.92857142857143,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 141
+      }
+     },
+     "MQTT-Malformed_Data": {
+      "flows": 804,
+      "detected_pct": 98.6318407960199,
+      "naming_pct": null,
+      "named_as": {
+       "DOS": 793
+      }
+     },
+     "Recon-OS_Scan": {
+      "flows": 16367,
+      "detected_pct": 99.97556057921427,
+      "naming_pct": 99.75554604901302,
+      "named_as": {
+       "PORT_SCAN": 16323,
+       "DOS": 40
+      }
+     },
+     "Recon-Ping_Sweep": {
+      "flows": 9,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "Recon-Port_Scan": {
+      "flows": 107106,
+      "detected_pct": 99.99906634548952,
+      "naming_pct": 100.0,
+      "named_as": {
+       "PORT_SCAN": 107105
+      }
+     },
+     "Recon-VulScan": {
+      "flows": 2156,
+      "detected_pct": 99.58256029684601,
+      "naming_pct": 99.81369352585003,
+      "named_as": {
+       "PORT_SCAN": 2143,
+       "DOS": 4
+      }
+     },
+     "TCP_IP-DDoS-ICMP1": {
+      "flows": 12,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 12
+      }
+     },
+     "TCP_IP-DDoS-ICMP2": {
+      "flows": 20,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20
+      }
+     },
+     "TCP_IP-DDoS-SYN": {
+      "flows": 199591,
+      "detected_pct": 99.40027355942902,
+      "naming_pct": 95.34209703922497,
+      "named_as": {
+       "PORT_SCAN": 9241,
+       "DOS": 189153
+      }
+     },
+     "TCP_IP-DDoS-TCP": {
+      "flows": 199801,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199801
+      }
+     },
+     "TCP_IP-DDoS-UDP1": {
+      "flows": 20744,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20744
+      }
+     },
+     "TCP_IP-DDoS-UDP2": {
+      "flows": 15609,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 15609
+      }
+     },
+     "TCP_IP-DoS-ICMP": {
+      "flows": 6,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 6
+      }
+     },
+     "TCP_IP-DoS-SYN": {
+      "flows": 199767,
+      "detected_pct": 99.9989988336412,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199765
+      }
+     },
+     "TCP_IP-DoS-TCP": {
+      "flows": 199825,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199825
+      }
+     },
+     "TCP_IP-DoS-UDP": {
+      "flows": 13751,
+      "detected_pct": 99.95636680968657,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 13745
+      }
+     }
+    },
+    "runs_detected": 18,
+    "runs": 19
+   },
+   "iomt_test_at_0.25": {
+    "tau": 0.25,
+    "benign": {
+     "flows": 96825,
+     "alerts": 1103,
+     "rate": 0.011391686031500129,
+     "ci95": [
+      0.010732753062915344,
+      0.012080127866077222
+     ],
+     "hours": 92.68527542054653,
+     "per_hour": 11.900487914561305
+    },
+    "attack": {
+     "flows": 1206581,
+     "detected": 1204687,
+     "detected_weighted": 0.9974656103299756,
+     "naming": {
+      "k": 1195064,
+      "n": 1203895
+     }
+    },
+    "per_label": {
+     "MQTT-DDoS-Connect_Flood": {
+      "flows": 199973,
+      "detected_pct": 99.99049871732683,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199954
+      }
+     },
+     "MQTT-DDoS-Publish_Flood": {
+      "flows": 2767,
+      "detected_pct": 99.24105529454282,
+      "naming_pct": 99.63583394027677,
+      "named_as": {
+       "PORT_SCAN": 10,
+       "DOS": 2736
+      }
+     },
+     "MQTT-DoS-Connect_Flood": {
+      "flows": 28105,
+      "detected_pct": 99.88969934175414,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 28074
+      }
+     },
+     "MQTT-DoS-Publish_Flood": {
+      "flows": 168,
+      "detected_pct": 82.14285714285714,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 138
+      }
+     },
+     "MQTT-Malformed_Data": {
+      "flows": 804,
+      "detected_pct": 98.50746268656717,
+      "naming_pct": null,
+      "named_as": {
+       "DOS": 792
+      }
+     },
+     "Recon-OS_Scan": {
+      "flows": 16367,
+      "detected_pct": 99.97556057921427,
+      "naming_pct": 99.75554604901302,
+      "named_as": {
+       "PORT_SCAN": 16323,
+       "DOS": 40
+      }
+     },
+     "Recon-Ping_Sweep": {
+      "flows": 9,
+      "detected_pct": 0.0,
+      "naming_pct": null,
+      "named_as": {}
+     },
+     "Recon-Port_Scan": {
+      "flows": 107106,
+      "detected_pct": 99.99906634548952,
+      "naming_pct": 100.0,
+      "named_as": {
+       "PORT_SCAN": 107105
+      }
+     },
+     "Recon-VulScan": {
+      "flows": 2156,
+      "detected_pct": 99.58256029684601,
+      "naming_pct": 99.81369352585003,
+      "named_as": {
+       "PORT_SCAN": 2143,
+       "DOS": 4
+      }
+     },
+     "TCP_IP-DDoS-ICMP1": {
+      "flows": 12,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 12
+      }
+     },
+     "TCP_IP-DDoS-ICMP2": {
+      "flows": 20,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20
+      }
+     },
+     "TCP_IP-DDoS-SYN": {
+      "flows": 199591,
+      "detected_pct": 99.12370798282488,
+      "naming_pct": 95.56363158479999,
+      "named_as": {
+       "PORT_SCAN": 8777,
+       "DOS": 189065
+      }
+     },
+     "TCP_IP-DDoS-TCP": {
+      "flows": 199801,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199801
+      }
+     },
+     "TCP_IP-DDoS-UDP1": {
+      "flows": 20744,
+      "detected_pct": 99.99517932896259,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 20743
+      }
+     },
+     "TCP_IP-DDoS-UDP2": {
+      "flows": 15609,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 15609
+      }
+     },
+     "TCP_IP-DoS-ICMP": {
+      "flows": 6,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 6
+      }
+     },
+     "TCP_IP-DoS-SYN": {
+      "flows": 199767,
+      "detected_pct": 99.9989988336412,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199765
+      }
+     },
+     "TCP_IP-DoS-TCP": {
+      "flows": 199825,
+      "detected_pct": 100.0,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 199825
+      }
+     },
+     "TCP_IP-DoS-UDP": {
+      "flows": 13751,
+      "detected_pct": 99.95636680968657,
+      "naming_pct": 100.0,
+      "named_as": {
+       "DOS": 13745
+      }
+     }
+    },
+    "runs_detected": 18,
+    "runs": 19
+   },
+   "cicids_v2_test_at_own_tau": {
+    "tau": 0.133,
+    "TP": 63707,
+    "FP": 642,
+    "TN": 300415,
+    "FN": 36
+   },
+   "cicids_v2_test_at_0.25": {
+    "tau": 0.25,
+    "TP": 63698,
+    "FP": 565,
+    "TN": 300492,
+    "FN": 45
+   },
+   "classes": [
+    "BENIGN",
+    "PORT_SCAN",
+    "BRUTE_FORCE",
+    "MITM",
+    "DOS",
+    "DATA_EXFILTRATION"
+   ],
+   "gates_iomt_test": {
+    "f1_weighted": 0.9909252143438415,
+    "f1_weighted_gt_0_95": true,
+    "fpr": 0.008241673121611155,
+    "fpr_lt_0_02": true,
+    "port_scan_recall": 0.9994587624763208,
+    "dos_recall": 0.9897494674296549,
+    "port_scan_recall_gt_0_90": true,
+    "dos_recall_gt_0_90": true
+   }
+  }
+ }
+}

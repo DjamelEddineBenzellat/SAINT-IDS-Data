@@ -1,0 +1,18 @@
+{
+  "protocol_id": "v2_dedup",
+  "description": "Reviewer 1 Comment 8: deduplicate model-input vectors before splitting; 4-way split with a tuning partition never seen by the final model.",
+  "approved_by_author": "2026-10-28 (decisions D1-D4)",
+  "dedup": {"enabled": true, "space": "mapped33", "conflict_policy": "drop"},
+  "split": {"train": 0.60, "val": 0.10, "tune": 0.15, "test": 0.15, "stratify": true, "random_state": 42},
+  "balancing": {"apply_to": "train_only", "max_benign_multiplier": 10, "smote_threshold": 1000, "random_state": 42},
+  "inf_replacement": "train-only column max of finite values (columns 3 and 23)",
+  "lightgbm": {
+    "baseline": {"n_estimators": 300, "max_depth": 8, "learning_rate": 0.05},
+    "optuna": {"n_trials": 50, "sampler": "TPESampler", "sampler_seed": 42, "objective": "weighted F1 on val",
+               "early_stopping_rounds": 30},
+    "final_refit": "train+val, best params, n_estimators = best trial's early-stopping best iteration (amended 2026-10-28 after the pilot: V1-style refit with the searched n_estimators diverged)",
+    "control_run": "V1 hyperparameters (edge/models/training_report.json) on the same v2 split"
+  },
+  "isolation_forest": {"n_estimators": 200, "contamination": 0.01, "random_state": 42, "fit_on": "BENIGN rows of train"},
+  "output_dir": "edge/models_v2"
+}

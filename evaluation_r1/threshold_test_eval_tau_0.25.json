@@ -1,0 +1,34 @@
+{
+ "tau": 0.25,
+ "TP": 63699,
+ "FP": 432,
+ "TN": 300625,
+ "FN": 44,
+ "recall": 0.99930972812701,
+ "recall_CI95": [
+  0.999074,
+  0.999486
+ ],
+ "precision": 0.9932637881835618,
+ "F1_binary": 0.9962775857484711,
+ "benign_alert_pct": 0.14349442132220808,
+ "benign_alert_CI95_pct": [
+  0.13060000000000002,
+  0.1577
+ ],
+ "all_flow_alert_pct": 17.579769736842106,
+ "encrypt_selected": 64131,
+ "false_alert_share_pct": 0.6736211816438228,
+ "ckks_cores_at_4269fps": 4.928929926481085,
+ "ciphertext_MB_per_s_at_4269fps": 331.26203534703944,
+ "PORT_SCAN_missed": 7,
+ "PORT_SCAN_recall": 0.999482936918304,
+ "BRUTE_FORCE_missed": 1,
+ "BRUTE_FORCE_recall": 0.9992663242846662,
+ "MITM_missed": 19,
+ "MITM_recall": 0.941358024691358,
+ "DOS_missed": 11,
+ "DOS_recall": 0.9997719025401762,
+ "DATA_EXFILTRATION_missed": 6,
+ "DATA_EXFILTRATION_recall": 0.9795221843003413
+}

@@ -1,0 +1,383 @@
+{
+ "meta": {
+  "cores": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    10,
+    11
+   ]
+  ],
+  "receiver_cpus": [
+   10,
+   11
+  ],
+  "step_s": 20,
+  "quick": false,
+  "repo_commit": "1b1a94800dd452a24401885b80d8b4b263343b4e",
+  "elapsed_s": 237.1
+ },
+ "X2_W1": {
+  "server_cpus": [
+   0
+  ],
+  "health_encryption": {
+   "status": "active",
+   "scheme": "CKKS",
+   "library": "tenseal 0.3.18",
+   "poly_modulus_degree": 8192,
+   "coeff_mod_bit_sizes": [
+    60,
+    40,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "public_context_only": true,
+   "layout": "alert30/2",
+   "max_alerts_per_ciphertext": 136,
+   "flush_ms": 250.0,
+   "queue_max_alerts": 10000,
+   "counters": {
+    "submitted": 0,
+    "dropped_queue_full": 0,
+    "encrypted_alerts": 0,
+    "ciphertexts": 0,
+    "sent_ciphertexts": 0,
+    "send_failures": 0,
+    "encrypt_failures": 0,
+    "queue_depth": 0,
+    "alerts_per_ciphertext_mean": null
+   }
+  },
+  "ramp": [
+   {
+    "label": "W1 ramp",
+    "offered_rate": 20,
+    "duration_s": 20,
+    "client_procs": 1,
+    "requests": 400,
+    "ok": 400,
+    "errors": 0,
+    "achieved_rate": 20.0,
+    "service_ms": {
+     "p50": 20.046114921569824,
+     "p95": 25.44666528701781,
+     "p99": 28.09025526046753,
+     "max": 47.05452919006348
+    },
+    "end_to_end_ms": {
+     "p50": 20.913124084472656,
+     "p99": 29.311323165893555
+    },
+    "client_lag_p99_ms": 1.9393348693847638,
+    "alerts_encrypt_selected": 66,
+    "explanation_status": {
+     "ok": 400
+    },
+    "cpu_percent_mean": 35.53999999999999,
+    "cpu_percent_max": 40.7,
+    "rss_mb_max": 301.944832,
+    "wall_s": 20.7,
+    "alerts_received": 66,
+    "alerts_lost": 0,
+    "batches": 37,
+    "alerts_per_batch": 1.7837837837837838,
+    "rejected_batches": 0,
+    "bytes_to_receiver": 16379824,
+    "bytes_per_1000_flows": 40949560.0,
+    "delivery_ms": {
+     "p50": 255.9748888015747,
+     "p95": 261.20519638061523,
+     "p99": 263.68318796157837,
+     "max": 263.8423442840576
+    },
+    "receiver_aggregate_ms_total": 44.76194800372468,
+    "sustainable": true
+   },
+   {
+    "label": "W1 ramp",
+    "offered_rate": 40,
+    "duration_s": 20,
+    "client_procs": 1,
+    "requests": 800,
+    "ok": 800,
+    "errors": 0,
+    "achieved_rate": 40.0,
+    "service_ms": {
+     "p50": 13.23997974395752,
+     "p95": 15.172910690307615,
+     "p99": 18.7866473197937,
+     "max": 29.781818389892578
+    },
+    "end_to_end_ms": {
+     "p50": 13.920903205871582,
+     "p99": 19.89866971969604
+    },
+    "client_lag_p99_ms": 2.1260905265808105,
+    "alerts_encrypt_selected": 142,
+    "explanation_status": {
+     "ok": 800
+    },
+    "cpu_percent_mean": 48.129999999999995,
+    "cpu_percent_max": 50.8,
+    "rss_mb_max": 302.256128,
+    "wall_s": 20.7,
+    "alerts_received": 142,
+    "alerts_lost": 0,
+    "batches": 55,
+    "alerts_per_batch": 2.581818181818182,
+    "rejected_batches": 0,
+    "bytes_to_receiver": 24353787,
+    "bytes_per_1000_flows": 30442233.75,
+    "delivery_ms": {
+     "p50": 206.92682266235352,
+     "p95": 258.7405562400818,
+     "p99": 263.00748586654663,
+     "max": 271.18635177612305
+    },
+    "receiver_aggregate_ms_total": 64.93374801721075,
+    "sustainable": true
+   },
+   {
+    "label": "W1 ramp",
+    "offered_rate": 60,
+    "duration_s": 20,
+    "client_procs": 1,
+    "requests": 1200,
+    "ok": 1200,
+    "errors": 0,
+    "achieved_rate": 60.0,
+    "service_ms": {
+     "p50": 10.299921035766602,
+     "p95": 11.529850959777832,
+     "p99": 16.409740447998047,
+     "max": 41.54658317565918
+    },
+    "end_to_end_ms": {
+     "p50": 10.93757152557373,
+     "p99": 17.196297645568848
+    },
+    "client_lag_p99_ms": 1.0936307907104492,
+    "alerts_encrypt_selected": 220,
+    "explanation_status": {
+     "ok": 1200
+    },
+    "cpu_percent_mean": 58.254999999999995,
+    "cpu_percent_max": 61.8,
+    "rss_mb_max": 302.493696,
+    "wall_s": 20.7,
+    "alerts_received": 220,
+    "alerts_lost": 0,
+    "batches": 60,
+    "alerts_per_batch": 3.6666666666666665,
+    "rejected_batches": 0,
+    "bytes_to_receiver": 26577310,
+    "bytes_per_1000_flows": 22147758.333333336,
+    "delivery_ms": {
+     "p50": 177.7651309967041,
+     "p95": 260.40658950805664,
+     "p99": 261.73882722854614,
+     "max": 265.84386825561523
+    },
+    "receiver_aggregate_ms_total": 72.07247200494749,
+    "sustainable": true
+   },
+   {
+    "label": "W1 ramp",
+    "offered_rate": 80,
+    "duration_s": 20,
+    "client_procs": 1,
+    "requests": 1600,
+    "ok": 1600,
+    "errors": 0,
+    "achieved_rate": 80.0,
+    "service_ms": {
+     "p50": 10.412216186523438,
+     "p95": 14.26229476928711,
+     "p99": 16.92277431488037,
+     "max": 33.045053482055664
+    },
+    "end_to_end_ms": {
+     "p50": 11.049389839172363,
+     "p99": 17.562856674194336
+    },
+    "client_lag_p99_ms": 1.3686800003051753,
+    "alerts_encrypt_selected": 310,
+    "explanation_status": {
+     "ok": 1600
+    },
+    "cpu_percent_mean": 76.51000000000002,
+    "cpu_percent_max": 81.7,
+    "rss_mb_max": 302.698496,
+    "wall_s": 20.7,
+    "alerts_received": 310,
+    "alerts_lost": 0,
+    "batches": 65,
+    "alerts_per_batch": 4.769230769230769,
+    "rejected_batches": 0,
+    "bytes_to_receiver": 28786133,
+    "bytes_per_1000_flows": 17991333.125,
+    "delivery_ms": {
+     "p50": 169.82591152191162,
+     "p95": 260.1248025894165,
+     "p99": 262.79757738113403,
+     "max": 271.5740203857422
+    },
+    "receiver_aggregate_ms_total": 79.46008299040841,
+    "sustainable": true
+   },
+   {
+    "label": "W1 ramp",
+    "offered_rate": 100,
+    "duration_s": 20,
+    "client_procs": 1,
+    "requests": 2000,
+    "ok": 2000,
+    "errors": 0,
+    "achieved_rate": 100.0,
+    "service_ms": {
+     "p50": 12.489080429077148,
+     "p95": 23.56801033020019,
+     "p99": 36.018288135528564,
+     "max": 70.09720802307129
+    },
+    "end_to_end_ms": {
+     "p50": 13.005256652832031,
+     "p99": 36.99358940124512
+    },
+    "client_lag_p99_ms": 2.0697736740112305,
+    "alerts_encrypt_selected": 386,
+    "explanation_status": {
+     "ok": 2000
+    },
+    "cpu_percent_mean": 94.33500000000001,
+    "cpu_percent_max": 99.7,
+    "rss_mb_max": 302.886912,
+    "wall_s": 20.7,
+    "alerts_received": 386,
+    "alerts_lost": 0,
+    "batches": 66,
+    "alerts_per_batch": 5.848484848484849,
+    "rejected_batches": 0,
+    "bytes_to_receiver": 29239718,
+    "bytes_per_1000_flows": 14619859.0,
+    "delivery_ms": {
+     "p50": 155.5347442626953,
+     "p95": 262.20422983169556,
+     "p99": 264.15714025497437,
+     "max": 265.1655673980713
+    },
+    "receiver_aggregate_ms_total": 82.15130899407086,
+    "sustainable": true
+   }
+  ],
+  "max_sustainable_rate": 100,
+  "busy": {
+   "label": "W1 busy (attacks only)",
+   "offered_rate": 70.0,
+   "duration_s": 30,
+   "client_procs": 1,
+   "requests": 2100,
+   "ok": 2100,
+   "errors": 0,
+   "achieved_rate": 70.0,
+   "service_ms": {
+    "p50": 10.425209999084473,
+    "p95": 15.317583084106445,
+    "p99": 16.77177906036376,
+    "max": 39.79635238647461
+   },
+   "end_to_end_ms": {
+    "p50": 11.092782020568848,
+    "p99": 17.529115676879876
+   },
+   "client_lag_p99_ms": 1.3128042221069318,
+   "alerts_encrypt_selected": 2100,
+   "explanation_status": {
+    "ok": 2100
+   },
+   "cpu_percent_mean": 68.60999999999999,
+   "cpu_percent_max": 71.8,
+   "rss_mb_max": 303.005696,
+   "wall_s": 30.7,
+   "alerts_received": 2100,
+   "alerts_lost": 0,
+   "batches": 117,
+   "alerts_per_batch": 17.94871794871795,
+   "rejected_batches": 0,
+   "bytes_to_receiver": 51877708,
+   "bytes_per_1000_flows": 24703670.476190478,
+   "delivery_ms": {
+    "p50": 140.22183418273926,
+    "p95": 258.2995653152466,
+    "p99": 261.7031931877136,
+    "max": 264.83607292175293
+   },
+   "receiver_aggregate_ms_total": 145.21357801640988,
+   "sustainable": true
+  },
+  "burst": {
+   "label": "W1 burst",
+   "offered_rate": 70.0,
+   "duration_s": 80,
+   "client_procs": 1,
+   "requests": 5600,
+   "ok": 5600,
+   "errors": 0,
+   "achieved_rate": 70.0,
+   "service_ms": {
+    "p50": 10.346412658691406,
+    "p95": 13.28654289245606,
+    "p99": 17.13176488876344,
+    "max": 40.189504623413086
+   },
+   "end_to_end_ms": {
+    "p50": 11.001944541931152,
+    "p99": 17.838318347930908
+   },
+   "client_lag_p99_ms": 1.1928963661193868,
+   "alerts_encrypt_selected": 2170,
+   "explanation_status": {
+    "ok": 5600
+   },
+   "cpu_percent_mean": 68.87625,
+   "cpu_percent_max": 72.7,
+   "rss_mb_max": 303.644672,
+   "wall_s": 80.7,
+   "alerts_received": 2170,
+   "alerts_lost": 0,
+   "batches": 266,
+   "alerts_per_batch": 8.157894736842104,
+   "rejected_batches": 0,
+   "bytes_to_receiver": 117856735,
+   "bytes_per_1000_flows": 21045845.535714284,
+   "delivery_ms": {
+    "p50": 152.0458459854126,
+    "p95": 260.88947057724,
+    "p99": 262.6749587059021,
+    "max": 266.2985324859619
+   },
+   "receiver_aggregate_ms_total": 331.91153603911516,
+   "sustainable": true
+  }
+ }
+}

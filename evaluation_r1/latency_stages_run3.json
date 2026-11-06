@@ -1,0 +1,514 @@
+{
+ "script": "stage_latency_r1.py",
+ "onnx_mode": "deployed",
+ "run": 3,
+ "quick": false,
+ "repo_commit": "198a3c9cdf441af9e12c187b6d2406ae817c3c45",
+ "policy": {
+  "policy_id": "saint-ids-cprime",
+  "version": "2.4.0",
+  "alert_threshold": 0.25,
+  "threshold_status": "FINAL",
+  "critical_threshold": null,
+  "encrypt_alerts": true,
+  "rule_detectors_enabled": true,
+  "evasion_rules_in_alert_decision": false,
+  "explanation_method": "native",
+  "explanation_top_k": 5,
+  "sha256": "2923254aa9fc2631218129b53a2169f3594e4d1e04770e65a8dde30cebf84679"
+ },
+ "sample_sha256": "0e7e50976cc2f5764e89009b404709c592d7bf7c2f731029b28956b2a561db5d",
+ "libraries": {
+  "onnxruntime": "1.31.1",
+  "lightgbm": "4.7.0",
+  "numpy": "2.5.4",
+  "tenseal": "0.3.18"
+ },
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "ORT_INTRA_OP_THREADS": null
+ },
+ "machine_before": {
+  "cpu_model": "12th Gen Intel(R) Core(TM) i5-12400",
+  "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+  "cpu_count": 12,
+  "core": 2,
+  "thread_siblings": "2-3",
+  "governor": "powersave",
+  "energy_perf_preference": "balance_performance",
+  "no_turbo": "0",
+  "loadavg": [
+   3.14501953125,
+   2.17578125,
+   1.2060546875
+  ],
+  "uptime_s": 3860.91
+ },
+ "B_model_only_v2_fp32": {
+  "n": 10000,
+  "mean_ms": 0.08409360669970738,
+  "p50_ms": 0.08325249996232742,
+  "p95_ms": 0.09249424999779876,
+  "p99_ms": 0.10407382987978055,
+  "max_ms": 0.14086000010138378,
+  "throughput_flows_per_s_serial": 11891.510416135829
+ },
+ "normal_mix": {
+  "ingest": {
+   "n": 2000,
+   "mean_ms": 0.05071847250269457,
+   "p50_ms": 0.047545500137857744,
+   "p95_ms": 0.07270670012076152,
+   "p99_ms": 0.09244426018994999,
+   "max_ms": 0.11765099998228834,
+   "throughput_flows_per_s_serial": 19716.68212103336
+  },
+  "score": {
+   "n": 2000,
+   "mean_ms": 0.2015478184987387,
+   "p50_ms": 0.18026049997388327,
+   "p95_ms": 0.30438874998708343,
+   "p99_ms": 0.4102833196702704,
+   "max_ms": 4.980145999979868,
+   "throughput_flows_per_s_serial": 4961.601705484389
+  },
+  "explain": {
+   "n": 2000,
+   "mean_ms": 8.23482346000128,
+   "p50_ms": 8.03306750003685,
+   "p95_ms": 9.356984649957667,
+   "p99_ms": 13.36510169999201,
+   "max_ms": 16.08807400043588,
+   "throughput_flows_per_s_serial": 121.43551162417324
+  },
+  "route": {
+   "n": 2000,
+   "mean_ms": 0.12470218549697165,
+   "p50_ms": 0.11139499997625535,
+   "p95_ms": 0.18097389972808742,
+   "p99_ms": 0.24502501990355083,
+   "max_ms": 4.501606999838259,
+   "throughput_flows_per_s_serial": 8019.105647705626
+  },
+  "total": {
+   "n": 2000,
+   "mean_ms": 8.611791936499685,
+   "p50_ms": 8.386258500195254,
+   "p95_ms": 9.875644199746603,
+   "p99_ms": 13.791088609823419,
+   "max_ms": 16.694711000127427,
+   "throughput_flows_per_s_serial": 116.11985140533436
+  },
+  "flows": 2000,
+  "alerts": 360,
+  "explanation_status": {
+   "ok": 2000,
+   "failed": 0
+  },
+  "decisions_sha256": "7017571c5ab019ed80c42a9fc6bce01dce87bbb69aa86f52dfbcdae07802be9d",
+  "wall_s": 17.23061240099969,
+  "process_cpu_s": 17.226946502999997,
+  "cores_used": 0.9997872450546517,
+  "core_mhz": {
+   "mean": 4273.937,
+   "min": 4000.0,
+   "max": 4400.0,
+   "n": 20
+  },
+  "threads": [
+   {
+    "main_thread": true,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 16.92,
+    "busy_fraction": 0.982
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.3,
+    "busy_fraction": 0.017
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   }
+  ],
+  "session": {
+   "intra_op_num_threads": 1,
+   "inter_op_num_threads": 1,
+   "providers": [
+    "CPUExecutionProvider"
+   ]
+  },
+  "pseudonymizer": {
+   "ip_pseudonymization": "active",
+   "scheme": "hmac-sha256/daily-v1"
+  },
+  "relay": {
+   "submitted": 360,
+   "dropped_queue_full": 0,
+   "encrypted_alerts": 360,
+   "ciphertexts": 59,
+   "sent_ciphertexts": 59,
+   "send_failures": 0,
+   "encrypt_failures": 0,
+   "queue_depth": 0,
+   "encrypt_ms": {
+    "mean": 8.586593220338983,
+    "p99": 11.83602,
+    "n": 59
+   },
+   "delivery_ms": {
+    "mean": 148.41448590554035,
+    "p99": 261.24824959987563,
+    "n": 360
+   },
+   "alerts_per_ciphertext_mean": 6.101694915254237
+  },
+  "relay_batches_sent": 59,
+  "isolation_forest": "off",
+  "explanation_method": "native"
+ },
+ "busy_mix_attacks_only": {
+  "ingest": {
+   "n": 1747,
+   "mean_ms": 0.05041057412628191,
+   "p50_ms": 0.04757799979415722,
+   "p95_ms": 0.06965220018173564,
+   "p99_ms": 0.08035683999878523,
+   "max_ms": 0.2015330001086113,
+   "throughput_flows_per_s_serial": 19837.10793483391
+  },
+  "score": {
+   "n": 1747,
+   "mean_ms": 0.2018494321724058,
+   "p50_ms": 0.1867219998530345,
+   "p95_ms": 0.3051532000881706,
+   "p99_ms": 0.39257649982573634,
+   "max_ms": 0.7994429997779662,
+   "throughput_flows_per_s_serial": 4954.187828211819
+  },
+  "explain": {
+   "n": 1747,
+   "mean_ms": 8.227495972516817,
+   "p50_ms": 8.041082000090682,
+   "p95_ms": 8.957841699930214,
+   "p99_ms": 13.2500657201399,
+   "max_ms": 15.074703999744088,
+   "throughput_flows_per_s_serial": 121.5436632652762
+  },
+  "route": {
+   "n": 1747,
+   "mean_ms": 0.15452107155513337,
+   "p50_ms": 0.1430819997949584,
+   "p95_ms": 0.2119880997724975,
+   "p99_ms": 0.2582448600423959,
+   "max_ms": 4.519463000178803,
+   "throughput_flows_per_s_serial": 6471.609275911593
+  },
+  "total": {
+   "n": 1747,
+   "mean_ms": 8.634277050370638,
+   "p50_ms": 8.437896000032197,
+   "p95_ms": 9.55235899996296,
+   "p99_ms": 13.816322979855613,
+   "max_ms": 15.781438999965758,
+   "throughput_flows_per_s_serial": 115.8174557251523
+  },
+  "flows": 1747,
+  "alerts": 1746,
+  "explanation_status": {
+   "ok": 1747,
+   "failed": 0
+  },
+  "decisions_sha256": "290d3eb7c2034e417e9b9921af14ab73246d5e809a4d77f256ade8f22d6d13e8",
+  "wall_s": 15.089992599999732,
+  "process_cpu_s": 15.086835213999997,
+  "cores_used": 0.9997907629192784,
+  "core_mhz": {
+   "mean": 4293.8740588235305,
+   "min": 4000.0,
+   "max": 4400.0,
+   "n": 17
+  },
+  "threads": [
+   {
+    "main_thread": true,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 14.76,
+    "busy_fraction": 0.978
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.31,
+    "busy_fraction": 0.021
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   },
+   {
+    "main_thread": false,
+    "comm": "python",
+    "cpus_allowed": "2",
+    "last_cpu": 2,
+    "cpu_s": 0.0,
+    "busy_fraction": 0.0
+   }
+  ],
+  "session": {
+   "intra_op_num_threads": 1,
+   "inter_op_num_threads": 1,
+   "providers": [
+    "CPUExecutionProvider"
+   ]
+  },
+  "pseudonymizer": {
+   "ip_pseudonymization": "active",
+   "scheme": "hmac-sha256/daily-v1"
+  },
+  "relay": {
+   "submitted": 1746,
+   "dropped_queue_full": 0,
+   "encrypted_alerts": 1746,
+   "ciphertexts": 59,
+   "sent_ciphertexts": 59,
+   "send_failures": 0,
+   "encrypt_failures": 0,
+   "queue_depth": 0,
+   "encrypt_ms": {
+    "mean": 8.557525423728814,
+    "p99": 11.87752,
+    "n": 59
+   },
+   "delivery_ms": {
+    "mean": 136.19245290891206,
+    "p99": 259.2249720499467,
+    "n": 1746
+   },
+   "alerts_per_ciphertext_mean": 29.593220338983052
+  },
+  "relay_batches_sent": 59,
+  "isolation_forest": "off",
+  "explanation_method": "native"
+ },
+ "machine_after": {
+  "cpu_model": "12th Gen Intel(R) Core(TM) i5-12400",
+  "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+  "cpu_count": 12,
+  "core": 2,
+  "thread_siblings": "2-3",
+  "governor": "powersave",
+  "energy_perf_preference": "balance_performance",
+  "no_turbo": "0",
+  "loadavg": [
+   2.19482421875,
+   2.0439453125,
+   1.19580078125
+  ],
+  "uptime_s": 3896.64
+ }
+}

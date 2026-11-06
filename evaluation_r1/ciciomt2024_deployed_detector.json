@@ -1,0 +1,2253 @@
+{
+ "repo_commit": "5db2062eacc97ff00a621f266293edb6671997de",
+ "policy_version": "2.4.0",
+ "model_binding": {
+  "expected_sha256": "b3b60d5a833f449aab1d1ef43c40fd3f74ad20a3b337029b6affc97548ddc29e",
+  "actual_sha256": "b3b60d5a833f449aab1d1ef43c40fd3f74ad20a3b337029b6affc97548ddc29e",
+  "match": true
+ },
+ "extractor": {
+  "fin_mode": "fin_existing",
+  "flags": "cicv3b",
+  "iat_std": "sample",
+  "payload": "frame",
+  "timeout_s": 120.0,
+  "chosen_by": "c12_e0.py",
+  "repo_commit": "1b1a94800dd452a24401885b80d8b4b263343b4e"
+ },
+ "flows": 1303406,
+ "ingestor_effect": {
+  "n": 5000,
+  "max_abs_prob_diff": 0.0,
+  "decisions_changed": 0
+ },
+ "all": {
+  "benign": {
+   "flows": 96825,
+   "false_alarm_rate": {
+    "k": 8,
+    "n": 96825,
+    "rate": 8.262328943971082e-05,
+    "ci95": [
+     3.567152518799823e-05,
+     0.00016279429174667146
+    ]
+   },
+   "ml_false_alarms": 8,
+   "rule_false_alarms": 0,
+   "false_alarm_sources": {
+    "ml": 8
+   }
+  },
+  "attack": {
+   "flows": 1206581,
+   "detection": {
+    "k": 4229,
+    "n": 1206581,
+    "rate": 0.003504944964324815,
+    "ci95": [
+     0.003400273496194269,
+     0.0036120107774628026
+    ]
+   },
+   "detected_by_ml": 4229,
+   "detected_by_rules_only": 0,
+   "naming": {
+    "k": 4149,
+    "n": 4229,
+    "rate": 0.9810829983447623,
+    "ci95": [
+     0.97651078732595,
+     0.9849722202298243
+    ]
+   }
+  },
+  "per_label": {
+   "BENIGN": {
+    "flows": 96825,
+    "is_attack": false,
+    "alert": {
+     "k": 8,
+     "n": 96825,
+     "rate": 8.262328943971082e-05,
+     "ci95": [
+      3.567152518799823e-05,
+      0.00016279429174667146
+     ]
+    },
+    "ml_alert": 8,
+    "true_class": "BENIGN"
+   },
+   "MQTT-DDoS-Connect_Flood": {
+    "flows": 199973,
+    "is_attack": true,
+    "alert": {
+     "k": 1,
+     "n": 199973,
+     "rate": 5.000675091137304e-06,
+     "ci95": [
+      1.2660612373467954e-07,
+      2.7861659843287275e-05
+     ]
+    },
+    "ml_alert": 1,
+    "true_class": "DOS",
+    "naming": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.975
+     ]
+    },
+    "predicted_classes": {
+     "PORT_SCAN": 1
+    }
+   },
+   "MQTT-DDoS-Publish_Flood": {
+    "flows": 2767,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 2767,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.0013322810249590707
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "MQTT-DoS-Connect_Flood": {
+    "flows": 28105,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 28105,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.00013124488082356443
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "MQTT-DoS-Publish_Flood": {
+    "flows": 168,
+    "is_attack": true,
+    "alert": {
+     "k": 79,
+     "n": 168,
+     "rate": 0.47023809523809523,
+     "ci95": [
+      0.3929139835684449,
+      0.5486307501626382
+     ]
+    },
+    "ml_alert": 79,
+    "true_class": "DOS",
+    "naming": {
+     "k": 0,
+     "n": 79,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.045621252758611106
+     ]
+    },
+    "predicted_classes": {
+     "MITM": 79
+    }
+   },
+   "MQTT-Malformed_Data": {
+    "flows": 804,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 804,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.004577649004950304
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": NaN
+   },
+   "Recon-OS_Scan": {
+    "flows": 16367,
+    "is_attack": true,
+    "alert": {
+     "k": 1638,
+     "n": 16367,
+     "rate": 0.10007942811755362,
+     "ci95": [
+      0.09552256409826419,
+      0.10477896459688239
+     ]
+    },
+    "ml_alert": 1638,
+    "true_class": "PORT_SCAN",
+    "naming": {
+     "k": 1638,
+     "n": 1638,
+     "rate": 1.0,
+     "ci95": [
+      0.9977504708328425,
+      1.0
+     ]
+    },
+    "predicted_classes": {
+     "PORT_SCAN": 1638
+    }
+   },
+   "Recon-Ping_Sweep": {
+    "flows": 9,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 9,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3362671168799428
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "PORT_SCAN"
+   },
+   "Recon-Port_Scan": {
+    "flows": 107106,
+    "is_attack": true,
+    "alert": {
+     "k": 2482,
+     "n": 107106,
+     "rate": 0.023173304950236215,
+     "ci95": [
+      0.02228052579654885,
+      0.024092030855481072
+     ]
+    },
+    "ml_alert": 2482,
+    "true_class": "PORT_SCAN",
+    "naming": {
+     "k": 2482,
+     "n": 2482,
+     "rate": 1.0,
+     "ci95": [
+      0.9985148511249043,
+      1.0
+     ]
+    },
+    "predicted_classes": {
+     "PORT_SCAN": 2482
+    }
+   },
+   "Recon-VulScan": {
+    "flows": 2156,
+    "is_attack": true,
+    "alert": {
+     "k": 29,
+     "n": 2156,
+     "rate": 0.013450834879406308,
+     "ci95": [
+      0.009026243187044262,
+      0.01926090576087443
+     ]
+    },
+    "ml_alert": 29,
+    "true_class": "PORT_SCAN",
+    "naming": {
+     "k": 29,
+     "n": 29,
+     "rate": 1.0,
+     "ci95": [
+      0.8805551309304973,
+      1.0
+     ]
+    },
+    "predicted_classes": {
+     "PORT_SCAN": 29
+    }
+   },
+   "TCP_IP-DDoS-ICMP1": {
+    "flows": 12,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 12,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2646484693970512
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DDoS-ICMP2": {
+    "flows": 20,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 20,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1684334709830853
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DDoS-SYN": {
+    "flows": 199591,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 199591,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      1.8482022561299258e-05
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DDoS-TCP": {
+    "flows": 199801,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 199801,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      1.8462597288608395e-05
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DDoS-UDP1": {
+    "flows": 20744,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 20744,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.00017781293285558803
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DDoS-UDP2": {
+    "flows": 15609,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 15609,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.00023630236347491174
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DoS-ICMP": {
+    "flows": 6,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.45925812643990044
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DoS-SYN": {
+    "flows": 199767,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 199767,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      1.8465739561917014e-05
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DoS-TCP": {
+    "flows": 199825,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 199825,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      1.8460379857130935e-05
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   },
+   "TCP_IP-DoS-UDP": {
+    "flows": 13751,
+    "is_attack": true,
+    "alert": {
+     "k": 0,
+     "n": 13751,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.0002682266529052404
+     ]
+    },
+    "ml_alert": 0,
+    "true_class": "DOS"
+   }
+  },
+  "per_protocol": {
+   "CoAP": {
+    "benign": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "attack": {
+     "k": 0,
+     "n": 3,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.7075982261787133
+     ]
+    }
+   },
+   "DICOM": {
+    "benign": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "attack": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.45925812643990044
+     ]
+    }
+   },
+   "DNS": {
+    "benign": {
+     "k": 0,
+     "n": 7494,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.0004921232570003237
+     ]
+    },
+    "attack": {
+     "k": 1,
+     "n": 5,
+     "rate": 0.2,
+     "ci95": [
+      0.0050507633794680575,
+      0.7164179361180895
+     ]
+    }
+   },
+   "HL7": {
+    "benign": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "attack": {
+     "k": 0,
+     "n": 2,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.841886116991581
+     ]
+    }
+   },
+   "HTTPS/FHIR(443,8080)": {
+    "benign": {
+     "k": 1,
+     "n": 9280,
+     "rate": 0.00010775862068965517,
+     "ci95": [
+      2.7282083457054587e-06,
+      0.0006002447407601656
+     ]
+    },
+    "attack": {
+     "k": 2,
+     "n": 11,
+     "rate": 0.18181818181818182,
+     "ci95": [
+      0.02283119829995966,
+      0.5177558523601726
+     ]
+    }
+   },
+   "MQTT": {
+    "benign": {
+     "k": 2,
+     "n": 29098,
+     "rate": 6.873324627122139e-05,
+     "ci95": [
+      8.324023387004485e-06,
+      0.00024826582867844423
+     ]
+    },
+    "attack": {
+     "k": 80,
+     "n": 552346,
+     "rate": 0.00014483675087716757,
+     "ci95": [
+      0.00011484815391886346,
+      0.00018025868086543235
+     ]
+    }
+   },
+   "other": {
+    "benign": {
+     "k": 5,
+     "n": 50953,
+     "rate": 9.812964889211626e-05,
+     "ci95": [
+      3.186317297132169e-05,
+      0.00022898688135197443
+     ]
+    },
+    "attack": {
+     "k": 4146,
+     "n": 654208,
+     "rate": 0.0063374339659557815,
+     "ci95": [
+      0.00614656390660097,
+      0.006532695069085435
+     ]
+    }
+   }
+  },
+  "confusion_detected_attacks": {
+   "DOS": {
+    "MITM": 79,
+    "PORT_SCAN": 1
+   },
+   "PORT_SCAN": {
+    "MITM": 0,
+    "PORT_SCAN": 4149
+   }
+  }
+ },
+ "benign_only_captures": {
+  "captures": [
+   "WiFI_and_MQTT/attacks/pcap/test/Benign_test.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Active/Active.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Broker/ActiveBroker.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Idle/Idle.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_LAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_LAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_WAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_WAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_WAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_WAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_PHOTO.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_PRECORDING.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_PHOTO.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_RECORDING.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_APP.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_PHYSICAL.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_WAN_APP.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_WAN_PHYSICAL.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_PHOTO.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_RECORDING.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_MIC.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_PHOTO.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_RECORDING.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_WATCH.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/SenseU/SenseU_LAN_EMERGENCY.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/SenseU/SenseU_WAN_EMERGENCY.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Singcall/Singcall_LAN_PHYSICAL.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Interactions/Singcall/Singcall_WAN_PHYSICAL.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Power/Blink_Mini_Camera_Power.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Power/Ecobee_Camera_Power.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Power/M1T_Camera_Power.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Power/Multifunctional_Pager_Power.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Power/Owltron_Camera_Power.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Power/SenseUBaby_Power.pcap",
+   "WiFI_and_MQTT/profiling/PCAP/Power/Singcall_Power.pcap"
+  ],
+  "flows": 96825,
+  "flows_represented": 96825.0,
+  "active_hours": 92.68527542054653,
+  "false_alarm_rate": {
+   "k": 8,
+   "n": 96825,
+   "rate": 8.262328943971082e-05,
+   "ci95": [
+    3.567152518799823e-05,
+    0.00016279429174667146
+   ]
+  },
+  "false_alarms_per_hour": 0.08631360228149632,
+  "ml_false_alarms_per_hour": 0.08631360228149632,
+  "rule_false_alarms_per_hour": 0.0
+ },
+ "weighted_pooled": {
+  "note": "each kept flow weighted by 1/sample_frac of its capture (reservoir sampling for large captures)",
+  "attack_detection": 0.0012280322400111028,
+  "attack_detection_by_ml": 0.0012280322400111028,
+  "attack_flows_represented": 3446345.16677
+ },
+ "per_capture": {
+  "WiFI_and_MQTT/attacks/pcap/test/Benign_test.pcap": {
+   "label": "BENIGN",
+   "flows_total": 8066,
+   "kept_after_labelling": 8066,
+   "weight": 1.0,
+   "active_s": 14205.792357683182,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 8066,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DDoS-Connect_Flood_test.pcap": {
+   "label": "MQTT-DDoS-Connect_Flood",
+   "flows_total": 844595,
+   "kept_after_labelling": 199973,
+   "weight": 4.222975,
+   "active_s": 124.7855429649353,
+   "attack_flows": 199973,
+   "attack_alert_pct": 0.0005000675091137304,
+   "attack_ml_alert_pct": 0.0005000675091137304,
+   "attack_naming_pct": 0.0,
+   "attack_pred_classes": {
+    "PORT_SCAN": 1
+   },
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {
+    "ml": 1
+   }
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DDoS-Publish_Flood_test.pcap": {
+   "label": "MQTT-DDoS-Publish_Flood",
+   "flows_total": 2876,
+   "kept_after_labelling": 2767,
+   "weight": 1.0,
+   "active_s": 134.12119007110596,
+   "attack_flows": 2767,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DoS-Connect_Flood_test.pcap": {
+   "label": "MQTT-DoS-Connect_Flood",
+   "flows_total": 28249,
+   "kept_after_labelling": 28105,
+   "weight": 1.0,
+   "active_s": 242.11014986038208,
+   "attack_flows": 28105,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DoS-Publish_Flood_test.pcap": {
+   "label": "MQTT-DoS-Publish_Flood",
+   "flows_total": 230,
+   "kept_after_labelling": 168,
+   "weight": 1.0,
+   "active_s": 120.2971920967102,
+   "attack_flows": 168,
+   "attack_alert_pct": 47.023809523809526,
+   "attack_ml_alert_pct": 47.023809523809526,
+   "attack_naming_pct": 0.0,
+   "attack_pred_classes": {
+    "MITM": 79
+   },
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {
+    "ml": 79
+   }
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-Malformed_Data_test.pcap": {
+   "label": "MQTT-Malformed_Data",
+   "flows_total": 926,
+   "kept_after_labelling": 804,
+   "weight": 1.0,
+   "active_s": 220.3923659324646,
+   "attack_flows": 804,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-OS_Scan_test.pcap": {
+   "label": "Recon-OS_Scan",
+   "flows_total": 16538,
+   "kept_after_labelling": 16367,
+   "weight": 1.0,
+   "active_s": 217.837641954422,
+   "attack_flows": 16367,
+   "attack_alert_pct": 10.007942811755361,
+   "attack_ml_alert_pct": 10.007942811755361,
+   "attack_naming_pct": 100.0,
+   "attack_pred_classes": {
+    "PORT_SCAN": 1638
+   },
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {
+    "ml": 1638
+   }
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-Ping_Sweep_test.pcap": {
+   "label": "Recon-Ping_Sweep",
+   "flows_total": 44,
+   "kept_after_labelling": 9,
+   "weight": 1.0,
+   "active_s": 29.744991064071655,
+   "attack_flows": 9,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-Port_Scan_test.pcap": {
+   "label": "Recon-Port_Scan",
+   "flows_total": 107239,
+   "kept_after_labelling": 107106,
+   "weight": 1.0,
+   "active_s": 149.23992395401,
+   "attack_flows": 107106,
+   "attack_alert_pct": 2.3173304950236213,
+   "attack_ml_alert_pct": 2.3173304950236213,
+   "attack_naming_pct": 100.0,
+   "attack_pred_classes": {
+    "PORT_SCAN": 2482
+   },
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {
+    "ml": 2482
+   }
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-VulScan_test.pcap": {
+   "label": "Recon-VulScan",
+   "flows_total": 2372,
+   "kept_after_labelling": 2156,
+   "weight": 1.0,
+   "active_s": 388.44366812705994,
+   "attack_flows": 2156,
+   "attack_alert_pct": 1.3450834879406308,
+   "attack_ml_alert_pct": 1.3450834879406308,
+   "attack_naming_pct": 100.0,
+   "attack_pred_classes": {
+    "PORT_SCAN": 29
+   },
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {
+    "ml": 29
+   }
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-ICMP1_test.pcap": {
+   "label": "TCP_IP-DDoS-ICMP1",
+   "flows_total": 631,
+   "kept_after_labelling": 12,
+   "weight": 1.0,
+   "active_s": 626.6293110847473,
+   "attack_flows": 12,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-ICMP2_test.pcap": {
+   "label": "TCP_IP-DDoS-ICMP2",
+   "flows_total": 327,
+   "kept_after_labelling": 20,
+   "weight": 1.0,
+   "active_s": 475.405476808548,
+   "attack_flows": 20,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-SYN_test.pcap": {
+   "label": "TCP_IP-DDoS-SYN",
+   "flows_total": 975131,
+   "kept_after_labelling": 199591,
+   "weight": 4.875655,
+   "active_s": 1590.4529297351837,
+   "attack_flows": 199591,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-TCP_test.pcap": {
+   "label": "TCP_IP-DDoS-TCP",
+   "flows_total": 832099,
+   "kept_after_labelling": 199801,
+   "weight": 4.160495,
+   "active_s": 1025.1501774787903,
+   "attack_flows": 199801,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-UDP1_test.pcap": {
+   "label": "TCP_IP-DDoS-UDP1",
+   "flows_total": 21071,
+   "kept_after_labelling": 20744,
+   "weight": 1.0,
+   "active_s": 574.1846437454224,
+   "attack_flows": 20744,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-UDP2_test.pcap": {
+   "label": "TCP_IP-DDoS-UDP2",
+   "flows_total": 16015,
+   "kept_after_labelling": 15609,
+   "weight": 1.0,
+   "active_s": 436.29339385032654,
+   "attack_flows": 15609,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-ICMP_test.pcap": {
+   "label": "TCP_IP-DoS-ICMP",
+   "flows_total": 753,
+   "kept_after_labelling": 6,
+   "weight": 1.0,
+   "active_s": 1438.294585466385,
+   "attack_flows": 6,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-SYN_test.pcap": {
+   "label": "TCP_IP-DoS-SYN",
+   "flows_total": 262447,
+   "kept_after_labelling": 199767,
+   "weight": 1.312235,
+   "active_s": 442.4014642238617,
+   "attack_flows": 199767,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-TCP_test.pcap": {
+   "label": "TCP_IP-DoS-TCP",
+   "flows_total": 327978,
+   "kept_after_labelling": 199825,
+   "weight": 1.6398899999999998,
+   "active_s": 501.52732610702515,
+   "attack_flows": 199825,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-UDP_test.pcap": {
+   "label": "TCP_IP-DoS-UDP",
+   "flows_total": 14999,
+   "kept_after_labelling": 13751,
+   "weight": 1.0,
+   "active_s": 676.7656757831573,
+   "attack_flows": 13751,
+   "attack_alert_pct": 0.0,
+   "attack_ml_alert_pct": 0.0,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 0,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Active/Active.pcap": {
+   "label": "BENIGN",
+   "flows_total": 32232,
+   "kept_after_labelling": 32232,
+   "weight": 1.0,
+   "active_s": 103667.12695598602,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 32232,
+   "benign_alerts": 5,
+   "benign_ml_alerts": 5,
+   "alert_sources": {
+    "ml": 5
+   }
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Broker/ActiveBroker.pcap": {
+   "label": "BENIGN",
+   "flows_total": 27129,
+   "kept_after_labelling": 27129,
+   "weight": 1.0,
+   "active_s": 103700.8431854248,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 27129,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Idle/Idle.pcap": {
+   "label": "BENIGN",
+   "flows_total": 27257,
+   "kept_after_labelling": 27257,
+   "weight": 1.0,
+   "active_s": 93597.37709999084,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 27257,
+   "benign_alerts": 3,
+   "benign_ml_alerts": 3,
+   "alert_sources": {
+    "ml": 3
+   }
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_LAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 6,
+   "kept_after_labelling": 6,
+   "weight": 1.0,
+   "active_s": 349.36821603775024,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 6,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_LAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 9,
+   "kept_after_labelling": 9,
+   "weight": 1.0,
+   "active_s": 363.34905910491943,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 9,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_WAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 6,
+   "kept_after_labelling": 6,
+   "weight": 1.0,
+   "active_s": 324.9942169189453,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 6,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Blink_Camera/Blink_Camera_WAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 10,
+   "kept_after_labelling": 10,
+   "weight": 1.0,
+   "active_s": 366.92230701446533,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 10,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 188,
+   "kept_after_labelling": 188,
+   "weight": 1.0,
+   "active_s": 348.44771003723145,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 188,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 178,
+   "kept_after_labelling": 178,
+   "weight": 1.0,
+   "active_s": 508.4248309135437,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 178,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_WAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 192,
+   "kept_after_labelling": 192,
+   "weight": 1.0,
+   "active_s": 359.74331998825073,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 192,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Ecobee_Camera/Ecobee_Camera_WAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 194,
+   "kept_after_labelling": 194,
+   "weight": 1.0,
+   "active_s": 387.39066195487976,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 194,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 14,
+   "kept_after_labelling": 14,
+   "weight": 1.0,
+   "active_s": 473.64202308654785,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 14,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_PHOTO.pcap": {
+   "label": "BENIGN",
+   "flows_total": 6,
+   "kept_after_labelling": 6,
+   "weight": 1.0,
+   "active_s": 266.46105003356934,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 6,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_PRECORDING.pcap": {
+   "label": "BENIGN",
+   "flows_total": 11,
+   "kept_after_labelling": 11,
+   "weight": 1.0,
+   "active_s": 355.7326910495758,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 11,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 53,
+   "kept_after_labelling": 53,
+   "weight": 1.0,
+   "active_s": 278.2575659751892,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 53,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 27,
+   "kept_after_labelling": 27,
+   "weight": 1.0,
+   "active_s": 327.21547198295593,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 27,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_PHOTO.pcap": {
+   "label": "BENIGN",
+   "flows_total": 25,
+   "kept_after_labelling": 25,
+   "weight": 1.0,
+   "active_s": 160.4441590309143,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 25,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_RECORDING.pcap": {
+   "label": "BENIGN",
+   "flows_total": 31,
+   "kept_after_labelling": 31,
+   "weight": 1.0,
+   "active_s": 366.20899987220764,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 31,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/M1T_Camera/M1T_Camera_WAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 29,
+   "kept_after_labelling": 29,
+   "weight": 1.0,
+   "active_s": 386.8896310329437,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 29,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_APP.pcap": {
+   "label": "BENIGN",
+   "flows_total": 19,
+   "kept_after_labelling": 19,
+   "weight": 1.0,
+   "active_s": 508.5439758300781,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 19,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_PHYSICAL.pcap": {
+   "label": "BENIGN",
+   "flows_total": 9,
+   "kept_after_labelling": 9,
+   "weight": 1.0,
+   "active_s": 610.0254249572754,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 9,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_WAN_APP.pcap": {
+   "label": "BENIGN",
+   "flows_total": 11,
+   "kept_after_labelling": 11,
+   "weight": 1.0,
+   "active_s": 287.5719678401947,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 11,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Multifunctional_Pager/Multifunctional_Pager_WAN_PHYSICAL.pcap": {
+   "label": "BENIGN",
+   "flows_total": 7,
+   "kept_after_labelling": 7,
+   "weight": 1.0,
+   "active_s": 395.35636806488037,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 7,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 51,
+   "kept_after_labelling": 51,
+   "weight": 1.0,
+   "active_s": 312.82992696762085,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 51,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_PHOTO.pcap": {
+   "label": "BENIGN",
+   "flows_total": 41,
+   "kept_after_labelling": 41,
+   "weight": 1.0,
+   "active_s": 144.10963606834412,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 41,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_RECORDING.pcap": {
+   "label": "BENIGN",
+   "flows_total": 51,
+   "kept_after_labelling": 51,
+   "weight": 1.0,
+   "active_s": 319.15631198883057,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 51,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_LAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 67,
+   "kept_after_labelling": 67,
+   "weight": 1.0,
+   "active_s": 311.80351996421814,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 67,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_MIC.pcap": {
+   "label": "BENIGN",
+   "flows_total": 36,
+   "kept_after_labelling": 36,
+   "weight": 1.0,
+   "active_s": 284.6806478500366,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 36,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_PHOTO.pcap": {
+   "label": "BENIGN",
+   "flows_total": 17,
+   "kept_after_labelling": 17,
+   "weight": 1.0,
+   "active_s": 122.60379099845886,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 17,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_RECORDING.pcap": {
+   "label": "BENIGN",
+   "flows_total": 49,
+   "kept_after_labelling": 49,
+   "weight": 1.0,
+   "active_s": 315.18898606300354,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 49,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Owltron_Camera/Owltron_Camera_WAN_WATCH.pcap": {
+   "label": "BENIGN",
+   "flows_total": 51,
+   "kept_after_labelling": 51,
+   "weight": 1.0,
+   "active_s": 291.52168107032776,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 51,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/SenseU/SenseU_LAN_EMERGENCY.pcap": {
+   "label": "BENIGN",
+   "flows_total": 4,
+   "kept_after_labelling": 4,
+   "weight": 1.0,
+   "active_s": 537.8709511756897,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 4,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/SenseU/SenseU_WAN_EMERGENCY.pcap": {
+   "label": "BENIGN",
+   "flows_total": 3,
+   "kept_after_labelling": 3,
+   "weight": 1.0,
+   "active_s": 378.5175907611847,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 3,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Singcall/Singcall_LAN_PHYSICAL.pcap": {
+   "label": "BENIGN",
+   "flows_total": 51,
+   "kept_after_labelling": 51,
+   "weight": 1.0,
+   "active_s": 258.992290019989,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 51,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Interactions/Singcall/Singcall_WAN_PHYSICAL.pcap": {
+   "label": "BENIGN",
+   "flows_total": 38,
+   "kept_after_labelling": 38,
+   "weight": 1.0,
+   "active_s": 234.947026014328,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 38,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Power/Blink_Mini_Camera_Power.pcap": {
+   "label": "BENIGN",
+   "flows_total": 57,
+   "kept_after_labelling": 57,
+   "weight": 1.0,
+   "active_s": 1144.9207408428192,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 57,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Power/Ecobee_Camera_Power.pcap": {
+   "label": "BENIGN",
+   "flows_total": 195,
+   "kept_after_labelling": 195,
+   "weight": 1.0,
+   "active_s": 1661.3190698623657,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 195,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Power/M1T_Camera_Power.pcap": {
+   "label": "BENIGN",
+   "flows_total": 61,
+   "kept_after_labelling": 61,
+   "weight": 1.0,
+   "active_s": 384.28032898902893,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 61,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Power/Multifunctional_Pager_Power.pcap": {
+   "label": "BENIGN",
+   "flows_total": 95,
+   "kept_after_labelling": 95,
+   "weight": 1.0,
+   "active_s": 1227.7355070114136,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 95,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Power/Owltron_Camera_Power.pcap": {
+   "label": "BENIGN",
+   "flows_total": 117,
+   "kept_after_labelling": 117,
+   "weight": 1.0,
+   "active_s": 1206.095820903778,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 117,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Power/SenseUBaby_Power.pcap": {
+   "label": "BENIGN",
+   "flows_total": 66,
+   "kept_after_labelling": 66,
+   "weight": 1.0,
+   "active_s": 1368.1106598377228,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 66,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  },
+  "WiFI_and_MQTT/profiling/PCAP/Power/Singcall_Power.pcap": {
+   "label": "BENIGN",
+   "flows_total": 66,
+   "kept_after_labelling": 66,
+   "weight": 1.0,
+   "active_s": 566.1777777671814,
+   "attack_flows": 0,
+   "attack_alert_pct": null,
+   "attack_ml_alert_pct": null,
+   "attack_naming_pct": null,
+   "attack_pred_classes": {},
+   "benign_flows": 66,
+   "benign_alerts": 0,
+   "benign_ml_alerts": 0,
+   "alert_sources": {}
+  }
+ },
+ "ml_only_view": {
+  "attack_detection_by_ml": {
+   "k": 4229,
+   "n": 1206581,
+   "rate": 0.003504944964324815,
+   "ci95": [
+    0.003400273496194269,
+    0.0036120107774628026
+   ]
+  },
+  "benign_ml_alert_rate": {
+   "k": 8,
+   "n": 96825,
+   "rate": 8.262328943971082e-05,
+   "ci95": [
+    3.567152518799823e-05,
+    0.00016279429174667146
+   ]
+  }
+ },
+ "views": {
+  "full_policy_2.3.0": {
+   "benign_alert_rate": {
+    "k": 8,
+    "n": 96825,
+    "rate": 8.262328943971082e-05,
+    "ci95": [
+     3.567152518799823e-05,
+     0.00016279429174667146
+    ]
+   },
+   "benign_only_captures_alerts_per_hour": 0.08631360228149632,
+   "attack_detection_weighted": 0.0012280322400111028,
+   "per_label_detection_pct": {
+    "MQTT-DDoS-Connect_Flood": 0.0005000675091137304,
+    "MQTT-DDoS-Publish_Flood": 0.0,
+    "MQTT-DoS-Connect_Flood": 0.0,
+    "MQTT-DoS-Publish_Flood": 47.023809523809526,
+    "MQTT-Malformed_Data": 0.0,
+    "Recon-OS_Scan": 10.007942811755361,
+    "Recon-Ping_Sweep": 0.0,
+    "Recon-Port_Scan": 2.3173304950236213,
+    "Recon-VulScan": 1.3450834879406308,
+    "TCP_IP-DDoS-ICMP1": 0.0,
+    "TCP_IP-DDoS-ICMP2": 0.0,
+    "TCP_IP-DDoS-SYN": 0.0,
+    "TCP_IP-DDoS-TCP": 0.0,
+    "TCP_IP-DDoS-UDP1": 0.0,
+    "TCP_IP-DDoS-UDP2": 0.0,
+    "TCP_IP-DoS-ICMP": 0.0,
+    "TCP_IP-DoS-SYN": 0.0,
+    "TCP_IP-DoS-TCP": 0.0,
+    "TCP_IP-DoS-UDP": 0.0
+   }
+  },
+  "ml_only": {
+   "benign_alert_rate": {
+    "k": 8,
+    "n": 96825,
+    "rate": 8.262328943971082e-05,
+    "ci95": [
+     3.567152518799823e-05,
+     0.00016279429174667146
+    ]
+   },
+   "benign_only_captures_alerts_per_hour": 0.08631360228149632,
+   "attack_detection_weighted": 0.0012280322400111028,
+   "per_label_detection_pct": {
+    "MQTT-DDoS-Connect_Flood": 0.0005000675091137304,
+    "MQTT-DDoS-Publish_Flood": 0.0,
+    "MQTT-DoS-Connect_Flood": 0.0,
+    "MQTT-DoS-Publish_Flood": 47.023809523809526,
+    "MQTT-Malformed_Data": 0.0,
+    "Recon-OS_Scan": 10.007942811755361,
+    "Recon-Ping_Sweep": 0.0,
+    "Recon-Port_Scan": 2.3173304950236213,
+    "Recon-VulScan": 1.3450834879406308,
+    "TCP_IP-DDoS-ICMP1": 0.0,
+    "TCP_IP-DDoS-ICMP2": 0.0,
+    "TCP_IP-DDoS-SYN": 0.0,
+    "TCP_IP-DDoS-TCP": 0.0,
+    "TCP_IP-DDoS-UDP1": 0.0,
+    "TCP_IP-DDoS-UDP2": 0.0,
+    "TCP_IP-DoS-ICMP": 0.0,
+    "TCP_IP-DoS-SYN": 0.0,
+    "TCP_IP-DoS-TCP": 0.0,
+    "TCP_IP-DoS-UDP": 0.0
+   }
+  },
+  "ml_plus_fast_filter (evasion rules off)": {
+   "benign_alert_rate": {
+    "k": 8,
+    "n": 96825,
+    "rate": 8.262328943971082e-05,
+    "ci95": [
+     3.567152518799823e-05,
+     0.00016279429174667146
+    ]
+   },
+   "benign_only_captures_alerts_per_hour": 0.08631360228149632,
+   "attack_detection_weighted": 0.0012280322400111028,
+   "per_label_detection_pct": {
+    "MQTT-DDoS-Connect_Flood": 0.0005000675091137304,
+    "MQTT-DDoS-Publish_Flood": 0.0,
+    "MQTT-DoS-Connect_Flood": 0.0,
+    "MQTT-DoS-Publish_Flood": 47.023809523809526,
+    "MQTT-Malformed_Data": 0.0,
+    "Recon-OS_Scan": 10.007942811755361,
+    "Recon-Ping_Sweep": 0.0,
+    "Recon-Port_Scan": 2.3173304950236213,
+    "Recon-VulScan": 1.3450834879406308,
+    "TCP_IP-DDoS-ICMP1": 0.0,
+    "TCP_IP-DDoS-ICMP2": 0.0,
+    "TCP_IP-DDoS-SYN": 0.0,
+    "TCP_IP-DDoS-TCP": 0.0,
+    "TCP_IP-DDoS-UDP1": 0.0,
+    "TCP_IP-DDoS-UDP2": 0.0,
+    "TCP_IP-DoS-ICMP": 0.0,
+    "TCP_IP-DoS-SYN": 0.0,
+    "TCP_IP-DoS-TCP": 0.0,
+    "TCP_IP-DoS-UDP": 0.0
+   }
+  },
+  "evasion_rules_only": {
+   "benign_alert_rate": {
+    "k": 0,
+    "n": 96825,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     3.809769362012005e-05
+    ]
+   },
+   "benign_only_captures_alerts_per_hour": 0.0,
+   "attack_detection_weighted": 0.0,
+   "per_label_detection_pct": {
+    "MQTT-DDoS-Connect_Flood": 0.0,
+    "MQTT-DDoS-Publish_Flood": 0.0,
+    "MQTT-DoS-Connect_Flood": 0.0,
+    "MQTT-DoS-Publish_Flood": 0.0,
+    "MQTT-Malformed_Data": 0.0,
+    "Recon-OS_Scan": 0.0,
+    "Recon-Ping_Sweep": 0.0,
+    "Recon-Port_Scan": 0.0,
+    "Recon-VulScan": 0.0,
+    "TCP_IP-DDoS-ICMP1": 0.0,
+    "TCP_IP-DDoS-ICMP2": 0.0,
+    "TCP_IP-DDoS-SYN": 0.0,
+    "TCP_IP-DDoS-TCP": 0.0,
+    "TCP_IP-DDoS-UDP1": 0.0,
+    "TCP_IP-DDoS-UDP2": 0.0,
+    "TCP_IP-DoS-ICMP": 0.0,
+    "TCP_IP-DoS-SYN": 0.0,
+    "TCP_IP-DoS-TCP": 0.0,
+    "TCP_IP-DoS-UDP": 0.0
+   }
+  }
+ },
+ "naming_ml": {
+  "MQTT-DDoS-Connect_Flood": {
+   "true_class": "DOS",
+   "ml_alerts": 1,
+   "flows": 199973,
+   "ml_top": {
+    "PORT_SCAN": 1
+   },
+   "ml_naming": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.975
+    ]
+   }
+  },
+  "MQTT-DDoS-Publish_Flood": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 2767,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "MQTT-DoS-Connect_Flood": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 28105,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "MQTT-DoS-Publish_Flood": {
+   "true_class": "DOS",
+   "ml_alerts": 79,
+   "flows": 168,
+   "ml_top": {
+    "MITM": 79
+   },
+   "ml_naming": {
+    "k": 0,
+    "n": 79,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.045621252758611106
+    ]
+   }
+  },
+  "MQTT-Malformed_Data": {
+   "true_class": NaN,
+   "ml_alerts": 0,
+   "flows": 804,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "Recon-OS_Scan": {
+   "true_class": "PORT_SCAN",
+   "ml_alerts": 1638,
+   "flows": 16367,
+   "ml_top": {
+    "PORT_SCAN": 1638
+   },
+   "ml_naming": {
+    "k": 1638,
+    "n": 1638,
+    "rate": 1.0,
+    "ci95": [
+     0.9977504708328425,
+     1.0
+    ]
+   }
+  },
+  "Recon-Ping_Sweep": {
+   "true_class": "PORT_SCAN",
+   "ml_alerts": 0,
+   "flows": 9,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "Recon-Port_Scan": {
+   "true_class": "PORT_SCAN",
+   "ml_alerts": 2482,
+   "flows": 107106,
+   "ml_top": {
+    "PORT_SCAN": 2482
+   },
+   "ml_naming": {
+    "k": 2482,
+    "n": 2482,
+    "rate": 1.0,
+    "ci95": [
+     0.9985148511249043,
+     1.0
+    ]
+   }
+  },
+  "Recon-VulScan": {
+   "true_class": "PORT_SCAN",
+   "ml_alerts": 29,
+   "flows": 2156,
+   "ml_top": {
+    "PORT_SCAN": 29
+   },
+   "ml_naming": {
+    "k": 29,
+    "n": 29,
+    "rate": 1.0,
+    "ci95": [
+     0.8805551309304973,
+     1.0
+    ]
+   }
+  },
+  "TCP_IP-DDoS-ICMP1": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 12,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DDoS-ICMP2": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 20,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DDoS-SYN": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 199591,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DDoS-TCP": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 199801,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DDoS-UDP1": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 20744,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DDoS-UDP2": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 15609,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DoS-ICMP": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 6,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DoS-SYN": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 199767,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DoS-TCP": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 199825,
+   "ml_top": {},
+   "ml_naming": null
+  },
+  "TCP_IP-DoS-UDP": {
+   "true_class": "DOS",
+   "ml_alerts": 0,
+   "flows": 13751,
+   "ml_top": {},
+   "ml_naming": null
+  }
+ },
+ "episodes": {
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DDoS-Connect_Flood_test.pcap": {
+   "label": "MQTT-DDoS-Connect_Flood",
+   "attack_flows": 199973,
+   "alerted_flows": 1,
+   "detected": true,
+   "time_to_first_alert_s": 110.527165
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DDoS-Publish_Flood_test.pcap": {
+   "label": "MQTT-DDoS-Publish_Flood",
+   "attack_flows": 2767,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DoS-Connect_Flood_test.pcap": {
+   "label": "MQTT-DoS-Connect_Flood",
+   "attack_flows": 28105,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-DoS-Publish_Flood_test.pcap": {
+   "label": "MQTT-DoS-Publish_Flood",
+   "attack_flows": 168,
+   "alerted_flows": 79,
+   "detected": true,
+   "time_to_first_alert_s": 119.99954
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/MQTT-Malformed_Data_test.pcap": {
+   "label": "MQTT-Malformed_Data",
+   "attack_flows": 804,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-OS_Scan_test.pcap": {
+   "label": "Recon-OS_Scan",
+   "attack_flows": 16367,
+   "alerted_flows": 1638,
+   "detected": true,
+   "time_to_first_alert_s": 0.0
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-Ping_Sweep_test.pcap": {
+   "label": "Recon-Ping_Sweep",
+   "attack_flows": 9,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-Port_Scan_test.pcap": {
+   "label": "Recon-Port_Scan",
+   "attack_flows": 107106,
+   "alerted_flows": 2482,
+   "detected": true,
+   "time_to_first_alert_s": 0.0
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/Recon-VulScan_test.pcap": {
+   "label": "Recon-VulScan",
+   "attack_flows": 2156,
+   "alerted_flows": 29,
+   "detected": true,
+   "time_to_first_alert_s": 190.38313
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-ICMP1_test.pcap": {
+   "label": "TCP_IP-DDoS-ICMP1",
+   "attack_flows": 12,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-ICMP2_test.pcap": {
+   "label": "TCP_IP-DDoS-ICMP2",
+   "attack_flows": 20,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-SYN_test.pcap": {
+   "label": "TCP_IP-DDoS-SYN",
+   "attack_flows": 199591,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-TCP_test.pcap": {
+   "label": "TCP_IP-DDoS-TCP",
+   "attack_flows": 199801,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-UDP1_test.pcap": {
+   "label": "TCP_IP-DDoS-UDP1",
+   "attack_flows": 20744,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DDoS-UDP2_test.pcap": {
+   "label": "TCP_IP-DDoS-UDP2",
+   "attack_flows": 15609,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-ICMP_test.pcap": {
+   "label": "TCP_IP-DoS-ICMP",
+   "attack_flows": 6,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-SYN_test.pcap": {
+   "label": "TCP_IP-DoS-SYN",
+   "attack_flows": 199767,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-TCP_test.pcap": {
+   "label": "TCP_IP-DoS-TCP",
+   "attack_flows": 199825,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  },
+  "WiFI_and_MQTT/attacks/pcap/test/TCP_IP-DoS-UDP_test.pcap": {
+   "label": "TCP_IP-DoS-UDP",
+   "attack_flows": 13751,
+   "alerted_flows": 0,
+   "detected": false,
+   "time_to_first_alert_s": null
+  }
+ },
+ "s_attack_quantiles": {
+  "BENIGN": {
+   "0.5": 0.0,
+   "0.9": 6.198883056640625e-06,
+   "0.99": 0.0016182661056518555
+  },
+  "MQTT-DDoS-Connect_Flood": {
+   "0.5": 2.384185791015625e-07,
+   "0.9": 6.794929504394531e-06,
+   "0.99": 0.00012854099273681627
+  },
+  "MQTT-DDoS-Publish_Flood": {
+   "0.5": 0.0,
+   "0.9": 1.3113021850585938e-06,
+   "0.99": 2.6226043701171875e-06
+  },
+  "MQTT-DoS-Connect_Flood": {
+   "0.5": 0.0,
+   "0.9": 1.919269561767578e-05,
+   "0.99": 4.208087921142578e-05
+  },
+  "MQTT-DoS-Publish_Flood": {
+   "0.5": 0.00010228157043457031,
+   "0.9": 0.9830618932843208,
+   "0.99": 0.9915718429535627
+  },
+  "MQTT-Malformed_Data": {
+   "0.5": 0.0,
+   "0.9": 7.683038711547854e-05,
+   "0.99": 0.0006592869758605957
+  },
+  "Recon-OS_Scan": {
+   "0.5": 0.0,
+   "0.9": 0.9942037950269852,
+   "0.99": 0.9999937651964501
+  },
+  "Recon-Ping_Sweep": {
+   "0.5": 3.4570693969726562e-06,
+   "0.9": 8.440017700195317e-06,
+   "0.99": 2.6378631591796872e-05
+  },
+  "Recon-Port_Scan": {
+   "0.5": 0.0,
+   "0.9": 0.0,
+   "0.99": 0.999991170838257
+  },
+  "Recon-VulScan": {
+   "0.5": 0.0,
+   "0.9": 0.0,
+   "0.99": 0.9999660045457859
+  },
+  "TCP_IP-DDoS-ICMP1": {
+   "0.5": 0.0,
+   "0.9": 1.931190490722657e-06,
+   "0.99": 3.3128261566162117e-06
+  },
+  "TCP_IP-DDoS-ICMP2": {
+   "0.5": 9.5367431640625e-07,
+   "0.9": 1.4543533325195316e-06,
+   "0.99": 1.9586086273193355e-06
+  },
+  "TCP_IP-DDoS-SYN": {
+   "0.5": 0.0,
+   "0.9": 1.430511474609375e-06,
+   "0.99": 3.218650817871094e-05
+  },
+  "TCP_IP-DDoS-TCP": {
+   "0.5": 0.0,
+   "0.9": 0.0,
+   "0.99": 0.0004132390022277832
+  },
+  "TCP_IP-DDoS-UDP1": {
+   "0.5": 1.1920928955078125e-07,
+   "0.9": 2.384185791015625e-07,
+   "0.99": 1.2600421905517231e-06
+  },
+  "TCP_IP-DDoS-UDP2": {
+   "0.5": 1.1920928955078125e-07,
+   "0.9": 2.384185791015625e-07,
+   "0.99": 1.1920928955078125e-06
+  },
+  "TCP_IP-DoS-ICMP": {
+   "0.5": 8.344650268554688e-07,
+   "0.9": 1.6689300537109375e-06,
+   "0.99": 2.205371856689453e-06
+  },
+  "TCP_IP-DoS-SYN": {
+   "0.5": 0.0,
+   "0.9": 0.0,
+   "0.99": 0.0
+  },
+  "TCP_IP-DoS-TCP": {
+   "0.5": 0.0,
+   "0.9": 4.76837158203125e-07,
+   "0.99": 5.960464477539062e-07
+  },
+  "TCP_IP-DoS-UDP": {
+   "0.5": 1.1920928955078125e-07,
+   "0.9": 2.384185791015625e-07,
+   "0.99": 3.5762786865234375e-07
+  }
+ },
+ "parity_full_handler": {
+  "n": 1000,
+  "mismatches": 0,
+  "explanation_status": {
+   "ok": 1000
+  }
+ }
+}

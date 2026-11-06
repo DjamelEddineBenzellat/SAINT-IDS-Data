@@ -1,0 +1,307 @@
+{
+ "tau": 0.25,
+ "tune": {
+  "n": 364799,
+  "if_standalone": {
+   "TP": 279,
+   "FP": 3036,
+   "TN": 298021,
+   "FN": 63463,
+   "recall": 0.00437701986131593,
+   "precision": 0.08416289592760182,
+   "F1": 0.008321278911970414,
+   "benign_alert_pct": 1.0084469054032956,
+   "benign_alert_CI95_pct": [
+    0.9733765509742514,
+    1.044767499058616
+   ]
+  },
+  "cprime": {
+   "TP": 63705,
+   "FP": 486,
+   "TN": 300571,
+   "FN": 37,
+   "recall": 0.9994195350004706,
+   "precision": 0.9924288451652101,
+   "F1": 0.9959119226470106,
+   "benign_alert_pct": 0.1614312239874841,
+   "benign_alert_CI95_pct": [
+    0.14771257110294106,
+    0.176421731502659
+   ]
+  },
+  "cprime_or_if": {
+   "TP": 63705,
+   "FP": 3522,
+   "TN": 297535,
+   "FN": 37,
+   "recall": 0.9994195350004706,
+   "precision": 0.9476103351332054,
+   "F1": 0.9728256304927121,
+   "benign_alert_pct": 1.1698781293907798,
+   "benign_alert_CI95_pct": [
+    1.1320868764176295,
+    1.2089155019484343
+   ]
+  },
+  "if_score_ranking": {
+   "auroc": 0.7190743193303873,
+   "average_precision": 0.34458906317588456
+  },
+  "s_attack_ranking": {
+   "auroc": 0.9999352327462149,
+   "average_precision": 0.9997863480435746
+  },
+  "cprime_misses": 37,
+  "cprime_misses_flagged_by_if": 0,
+  "added_by_if_by_class": {
+   "PORT_SCAN": 0,
+   "BRUTE_FORCE": 0,
+   "MITM": 0,
+   "DOS": 0,
+   "DATA_EXFILTRATION": 0
+  },
+  "added_false_alarms": 3036,
+  "misses_by_class": {
+   "PORT_SCAN": [
+    6,
+    0
+   ],
+   "BRUTE_FORCE": [
+    1,
+    0
+   ],
+   "MITM": [
+    11,
+    0
+   ],
+   "DOS": [
+    12,
+    0
+   ],
+   "DATA_EXFILTRATION": [
+    7,
+    0
+   ]
+  }
+ },
+ "test": {
+  "n": 364800,
+  "if_standalone": {
+   "TP": 274,
+   "FP": 3036,
+   "TN": 298021,
+   "FN": 63469,
+   "recall": 0.0042985112090739375,
+   "precision": 0.08277945619335347,
+   "F1": 0.00817263955378581,
+   "benign_alert_pct": 1.0084469054032956,
+   "benign_alert_CI95_pct": [
+    0.9733765509742514,
+    1.044767499058616
+   ]
+  },
+  "cprime": {
+   "TP": 63699,
+   "FP": 432,
+   "TN": 300625,
+   "FN": 44,
+   "recall": 0.99930972812701,
+   "precision": 0.9932637881835618,
+   "F1": 0.9962775857484711,
+   "benign_alert_pct": 0.14349442132220808,
+   "benign_alert_CI95_pct": [
+    0.1305940656534443,
+    0.15766708935957832
+   ]
+  },
+  "cprime_or_if": {
+   "TP": 63699,
+   "FP": 3468,
+   "TN": 297589,
+   "FN": 44,
+   "recall": 0.99930972812701,
+   "precision": 0.9483675018982536,
+   "F1": 0.9731724085249408,
+   "benign_alert_pct": 1.1519413267255039,
+   "benign_alert_CI95_pct": [
+    1.1144423882190369,
+    1.19068684255445
+   ]
+  },
+  "if_score_ranking": {
+   "auroc": 0.7190853142811002,
+   "average_precision": 0.3460484370101273
+  },
+  "s_attack_ranking": {
+   "auroc": 0.9999662781562828,
+   "average_precision": 0.9998430543217064
+  },
+  "cprime_misses": 44,
+  "cprime_misses_flagged_by_if": 0,
+  "added_by_if_by_class": {
+   "PORT_SCAN": 0,
+   "BRUTE_FORCE": 0,
+   "MITM": 0,
+   "DOS": 0,
+   "DATA_EXFILTRATION": 0
+  },
+  "added_false_alarms": 3036,
+  "misses_by_class": {
+   "PORT_SCAN": [
+    7,
+    0
+   ],
+   "BRUTE_FORCE": [
+    1,
+    0
+   ],
+   "MITM": [
+    19,
+    0
+   ],
+   "DOS": [
+    11,
+    0
+   ],
+   "DATA_EXFILTRATION": [
+    6,
+    0
+   ]
+  }
+ },
+ "if_threshold_budget": {
+  "+0.05pp": {
+   "if_score_threshold": 0.06648738682138111,
+   "tune": {
+    "extra_TP": 0,
+    "extra_FP": 150,
+    "with_if": {
+     "TP": 63705,
+     "FP": 636,
+     "TN": 300421,
+     "FN": 37,
+     "recall": 0.9994195350004706,
+     "precision": 0.9901151676225113,
+     "F1": 0.9947455946534668,
+     "benign_alert_pct": 0.21125567583547303,
+     "benign_alert_CI95_pct": [
+      0.1954778339859146,
+      0.22830410082128944
+     ]
+    }
+   },
+   "test": {
+    "extra_TP": 0,
+    "extra_FP": 142,
+    "with_if": {
+     "TP": 63699,
+     "FP": 574,
+     "TN": 300483,
+     "FN": 44,
+     "recall": 0.99930972812701,
+     "precision": 0.9910693448259766,
+     "F1": 0.995172478440195,
+     "benign_alert_pct": 0.1906615690716376,
+     "benign_alert_CI95_pct": [
+      0.17570163220316776,
+      0.20689261462737327
+     ]
+    }
+   }
+  },
+  "+0.1pp": {
+   "if_score_threshold": 0.057963929817173465,
+   "tune": {
+    "extra_TP": 0,
+    "extra_FP": 301,
+    "with_if": {
+     "TP": 63705,
+     "FP": 787,
+     "TN": 300270,
+     "FN": 37,
+     "recall": 0.9994195350004706,
+     "precision": 0.9877969360540843,
+     "F1": 0.9935742470795575,
+     "benign_alert_pct": 0.26141229069578187,
+     "benign_alert_CI95_pct": [
+      0.2437962933762859,
+      0.28029759118053277
+     ]
+    }
+   },
+   "test": {
+    "extra_TP": 0,
+    "extra_FP": 317,
+    "with_if": {
+     "TP": 63699,
+     "FP": 749,
+     "TN": 300308,
+     "FN": 44,
+     "recall": 0.99930972812701,
+     "precision": 0.988378227408143,
+     "F1": 0.993813918293796,
+     "benign_alert_pct": 0.24879009622762466,
+     "benign_alert_CI95_pct": [
+      0.23161864689090986,
+      0.2672311708415025
+     ]
+    }
+   }
+  },
+  "+0.5pp": {
+   "if_score_threshold": 0.03906804483168391,
+   "tune": {
+    "extra_TP": 0,
+    "extra_FP": 1504,
+    "with_if": {
+     "TP": 63705,
+     "FP": 1990,
+     "TN": 299067,
+     "FN": 37,
+     "recall": 0.9994195350004706,
+     "precision": 0.9697085014080219,
+     "F1": 0.9843398719067963,
+     "benign_alert_pct": 0.6610043945166529,
+     "benign_alert_CI95_pct": [
+      0.63268147144172,
+      0.6905864233719624
+     ]
+    }
+   },
+   "test": {
+    "extra_TP": 0,
+    "extra_FP": 1500,
+    "with_if": {
+     "TP": 63699,
+     "FP": 1932,
+     "TN": 299125,
+     "FN": 44,
+     "recall": 0.99930972812701,
+     "precision": 0.970562691411071,
+     "F1": 0.9847264519918995,
+     "benign_alert_pct": 0.6417389398020973,
+     "benign_alert_CI95_pct": [
+      0.613838330301231,
+      0.6708991467278312
+     ]
+    }
+   }
+  }
+ },
+ "meta": {
+  "repo_commit": "d83a6f1272f4cdc4dc8e8271eed7f0c34d8ece08",
+  "policy": {
+   "policy_id": "saint-ids-cprime",
+   "version": "2.0.0",
+   "alert_threshold": 0.25,
+   "threshold_status": "FINAL",
+   "critical_threshold": null,
+   "encrypt_alerts": true,
+   "rule_detectors_enabled": true,
+   "sha256": "d4a153112e81912b95b46b565dbeaf3392863ce30e7fa431ff9d564f07ab0987"
+  },
+  "elapsed_s": 17.1,
+  "cpu_count": 12
+ }
+}

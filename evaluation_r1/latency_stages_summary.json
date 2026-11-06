@@ -1,0 +1,150 @@
+{
+ "conditions": {
+  "deployed": {
+   "normal_mix": {
+    "stages_mean_ms": {
+     "ingest": 0.04986128399673362,
+     "score": 0.2015478184987387,
+     "explain": 8.224198227010675,
+     "route": 0.12404948149605843,
+     "total": 8.602203190501768
+    },
+    "total_ms": {
+     "p50_ms": 8.386258500195254,
+     "p95_ms": 9.473247999994783,
+     "p99_ms": 13.683539650105558,
+     "max_ms": 15.01059099973645
+    },
+    "cores_used": 0.9997872450546517
+   },
+   "busy_mix_attacks_only": {
+    "stages_mean_ms": {
+     "ingest": 0.04956108700641318,
+     "score": 0.2018494321724058,
+     "explain": 8.227495972516817,
+     "route": 0.15087353291413466,
+     "total": 8.634277050370638
+    },
+    "total_ms": {
+     "p50_ms": 8.387299999867537,
+     "p95_ms": 9.55235899996296,
+     "p99_ms": 13.816322979855613,
+     "max_ms": 16.200200999719527
+    },
+    "cores_used": 0.9997907629192784
+   }
+  },
+  "default": {
+   "normal_mix": {
+    "stages_mean_ms": {
+     "ingest": 0.05660970399867438,
+     "score": 0.1103250125008799,
+     "explain": 11.003080386996317,
+     "route": 0.13028071999565327,
+     "total": 11.309302211999238
+    },
+    "total_ms": {
+     "p50_ms": 11.00949850001598,
+     "p95_ms": 11.8282075000252,
+     "p99_ms": 17.920727440227893,
+     "max_ms": 19.628029999694263
+    },
+    "cores_used": 5.998461730685043
+   },
+   "busy_mix_attacks_only": {
+    "stages_mean_ms": {
+     "ingest": 0.05733990612501143,
+     "score": 0.1200550503714215,
+     "explain": 11.090561467087422,
+     "route": 0.16780176817301398,
+     "total": 11.43575819175687
+    },
+    "total_ms": {
+     "p50_ms": 11.075406000145449,
+     "p95_ms": 11.961362899910455,
+     "p99_ms": 18.05623364020903,
+     "max_ms": 18.788857999879838
+    },
+    "cores_used": 5.998895568644851
+   }
+  }
+ },
+ "checks": [
+  {
+   "ok": true,
+   "check": "one code commit across all runs"
+  },
+  {
+   "ok": true,
+   "check": "policy 2.4.0 in every run"
+  },
+  {
+   "ok": true,
+   "check": "one sample file across all runs"
+  },
+  {
+   "ok": true,
+   "check": "normal_mix: every flow explained"
+  },
+  {
+   "ok": true,
+   "check": "normal_mix: identical decisions in every run and condition"
+  },
+  {
+   "ok": true,
+   "check": "normal_mix: alerts = 360, as in the earlier run on these flows"
+  },
+  {
+   "ok": true,
+   "check": "normal_mix: every alert encrypted by the relay"
+  },
+  {
+   "ok": true,
+   "check": "normal_mix: relay lost nothing"
+  },
+  {
+   "ok": true,
+   "check": "normal_mix: IP pseudonyms active"
+  },
+  {
+   "ok": true,
+   "check": "normal_mix: Isolation Forest off"
+  },
+  {
+   "ok": true,
+   "check": "busy_mix_attacks_only: every flow explained"
+  },
+  {
+   "ok": true,
+   "check": "busy_mix_attacks_only: identical decisions in every run and condition"
+  },
+  {
+   "ok": true,
+   "check": "busy_mix_attacks_only: alerts = 1746, as in the earlier run on these flows"
+  },
+  {
+   "ok": true,
+   "check": "busy_mix_attacks_only: every alert encrypted by the relay"
+  },
+  {
+   "ok": true,
+   "check": "busy_mix_attacks_only: relay lost nothing"
+  },
+  {
+   "ok": true,
+   "check": "busy_mix_attacks_only: IP pseudonyms active"
+  },
+  {
+   "ok": true,
+   "check": "busy_mix_attacks_only: Isolation Forest off"
+  },
+  {
+   "ok": true,
+   "check": "deployed: session has 1 intra-op thread"
+  },
+  {
+   "ok": true,
+   "check": "default: session uses ONNX Runtime defaults"
+  }
+ ]
+}

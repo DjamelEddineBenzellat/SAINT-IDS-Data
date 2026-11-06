@@ -1,0 +1,436 @@
+{
+ "repo_commit": "5db2062eacc97ff00a621f266293edb6671997de",
+ "policy": "2.4.0",
+ "tau": 0.25,
+ "checks": {
+  "rows": 2431994,
+  "max_abs_diff_noninf_cells": 0.0
+ },
+ "splits": {
+  "test": {
+   "BENIGN": {
+    "saint_class": "BENIGN",
+    "n": 301057,
+    "alerted": 432,
+    "false_alarm_rate": 0.001434944213222081,
+    "ci95": [
+     0.0013028876633458255,
+     0.0015767421111252014
+    ]
+   },
+   "Bot": {
+    "saint_class": "DATA_EXFILTRATION",
+    "n": 293,
+    "detected": 287,
+    "recall": 0.9795221843003413,
+    "ci95": [
+     0.9559635555414875,
+     0.9924488119621059
+    ],
+    "named_correctly": 287,
+    "named_as": {
+     "DATA_EXFILTRATION": 287
+    }
+   },
+   "DDoS": {
+    "saint_class": "DOS",
+    "n": 19208,
+    "detected": 19201,
+    "recall": 0.9996355685131195,
+    "ci95": [
+     0.9992492769281387,
+     0.9998534674892335
+    ],
+    "named_correctly": 19201,
+    "named_as": {
+     "DOS": 19201
+    }
+   },
+   "DoS GoldenEye": {
+    "saint_class": "DOS",
+    "n": 1564,
+    "detected": 1562,
+    "recall": 0.9987212276214834,
+    "ci95": [
+     0.9953883437582648,
+     0.9998450971973164
+    ],
+    "named_correctly": 1562,
+    "named_as": {
+     "DOS": 1562
+    }
+   },
+   "DoS Hulk": {
+    "saint_class": "DOS",
+    "n": 25870,
+    "detected": 25870,
+    "recall": 1.0,
+    "ci95": [
+     0.9998574172221676,
+     1.0
+    ],
+    "named_correctly": 25867,
+    "named_as": {
+     "PORT_SCAN": 3,
+     "DOS": 25867
+    }
+   },
+   "DoS Slowhttptest": {
+    "saint_class": "DOS",
+    "n": 758,
+    "detected": 757,
+    "recall": 0.9986807387862797,
+    "ci95": [
+     0.9926716747041132,
+     0.9999665997557105
+    ],
+    "named_correctly": 757,
+    "named_as": {
+     "DOS": 757
+    }
+   },
+   "DoS slowloris": {
+    "saint_class": "DOS",
+    "n": 825,
+    "detected": 824,
+    "recall": 0.9987878787878788,
+    "ci95": [
+     0.9932651750687242,
+     0.9999693122187774
+    ],
+    "named_correctly": 823,
+    "named_as": {
+     "MITM": 1,
+     "DOS": 823
+    }
+   },
+   "FTP-Patator": {
+    "saint_class": "BRUTE_FORCE",
+    "n": 880,
+    "detected": 879,
+    "recall": 0.9988636363636364,
+    "ci95": [
+     0.9936850085951305,
+     0.9999712301775135
+    ],
+    "named_correctly": 879,
+    "named_as": {
+     "BRUTE_FORCE": 879
+    }
+   },
+   "Heartbleed": {
+    "saint_class": "MITM",
+    "n": 2,
+    "detected": 2,
+    "recall": 1.0,
+    "ci95": [
+     0.15811388300841897,
+     1.0
+    ],
+    "named_correctly": 2,
+    "named_as": {
+     "MITM": 2
+    }
+   },
+   "Infiltration": {
+    "saint_class": "MITM",
+    "n": 4,
+    "detected": 2,
+    "recall": 0.5,
+    "ci95": [
+     0.06758598648854294,
+     0.932414013511457
+    ],
+    "named_correctly": 2,
+    "named_as": {
+     "MITM": 2
+    }
+   },
+   "PortScan": {
+    "saint_class": "PORT_SCAN",
+    "n": 13538,
+    "detected": 13531,
+    "recall": 0.999482936918304,
+    "ci95": [
+     0.9989349444707862,
+     0.9997920893598153
+    ],
+    "named_correctly": 13518,
+    "named_as": {
+     "PORT_SCAN": 13518,
+     "MITM": 1,
+     "DOS": 12
+    }
+   },
+   "SSH-Patator": {
+    "saint_class": "BRUTE_FORCE",
+    "n": 483,
+    "detected": 483,
+    "recall": 1.0,
+    "ci95": [
+     0.9923916594910965,
+     1.0
+    ],
+    "named_correctly": 483,
+    "named_as": {
+     "BRUTE_FORCE": 483
+    }
+   },
+   "Web Attack � Brute Force": {
+    "saint_class": "MITM",
+    "n": 216,
+    "detected": 205,
+    "recall": 0.9490740740740741,
+    "ci95": [
+     0.9107079665491622,
+     0.9743071088492006
+    ],
+    "named_correctly": 205,
+    "named_as": {
+     "MITM": 205
+    }
+   },
+   "Web Attack � Sql Injection": {
+    "saint_class": "MITM",
+    "n": 2,
+    "detected": 2,
+    "recall": 1.0,
+    "ci95": [
+     0.15811388300841897,
+     1.0
+    ],
+    "named_correctly": 2,
+    "named_as": {
+     "MITM": 2
+    }
+   },
+   "Web Attack � XSS": {
+    "saint_class": "MITM",
+    "n": 100,
+    "detected": 94,
+    "recall": 0.94,
+    "ci95": [
+     0.8739700654191771,
+     0.9776651139286836
+    ],
+    "named_correctly": 94,
+    "named_as": {
+     "MITM": 94
+    }
+   }
+  },
+  "tune_plus_test": {
+   "BENIGN": {
+    "saint_class": "BENIGN",
+    "n": 602114,
+    "alerted": 918,
+    "false_alarm_rate": 0.0015246282265484609,
+    "ci95": [
+     0.0014276528470427395,
+     0.0016264491832014977
+    ]
+   },
+   "Bot": {
+    "saint_class": "DATA_EXFILTRATION",
+    "n": 586,
+    "detected": 573,
+    "recall": 0.9778156996587031,
+    "ci95": [
+     0.9623629208830347,
+     0.9881361649145878
+    ],
+    "named_correctly": 573,
+    "named_as": {
+     "DATA_EXFILTRATION": 573
+    }
+   },
+   "DDoS": {
+    "saint_class": "DOS",
+    "n": 38389,
+    "detected": 38376,
+    "recall": 0.9996613613274636,
+    "ci95": [
+     0.9994209871749117,
+     0.9998196772417839
+    ],
+    "named_correctly": 38376,
+    "named_as": {
+     "DOS": 38376
+    }
+   },
+   "DoS GoldenEye": {
+    "saint_class": "DOS",
+    "n": 3120,
+    "detected": 3116,
+    "recall": 0.9987179487179487,
+    "ci95": [
+     0.9967207216743091,
+     0.9996505771890591
+    ],
+    "named_correctly": 3116,
+    "named_as": {
+     "DOS": 3116
+    }
+   },
+   "DoS Hulk": {
+    "saint_class": "DOS",
+    "n": 51749,
+    "detected": 51747,
+    "recall": 0.9999613519101819,
+    "ci95": [
+     0.9998603968585459,
+     0.9999953195027542
+    ],
+    "named_correctly": 51740,
+    "named_as": {
+     "PORT_SCAN": 7,
+     "DOS": 51740
+    }
+   },
+   "DoS Slowhttptest": {
+    "saint_class": "DOS",
+    "n": 1553,
+    "detected": 1550,
+    "recall": 0.9980682549903412,
+    "ci95": [
+     0.9943650952743848,
+     0.999601450433125
+    ],
+    "named_correctly": 1550,
+    "named_as": {
+     "DOS": 1550
+    }
+   },
+   "DoS slowloris": {
+    "saint_class": "DOS",
+    "n": 1638,
+    "detected": 1637,
+    "recall": 0.9993894993894994,
+    "ci95": [
+     0.9966032512798103,
+     0.9999845435822207
+    ],
+    "named_correctly": 1636,
+    "named_as": {
+     "MITM": 1,
+     "DOS": 1636
+    }
+   },
+   "FTP-Patator": {
+    "saint_class": "BRUTE_FORCE",
+    "n": 1765,
+    "detected": 1763,
+    "recall": 0.9988668555240793,
+    "ci95": [
+     0.9959127464899753,
+     0.9998627414757562
+    ],
+    "named_correctly": 1763,
+    "named_as": {
+     "BRUTE_FORCE": 1763
+    }
+   },
+   "Heartbleed": {
+    "saint_class": "MITM",
+    "n": 6,
+    "detected": 6,
+    "recall": 1.0,
+    "ci95": [
+     0.5407418735600995,
+     1.0
+    ],
+    "named_correctly": 6,
+    "named_as": {
+     "MITM": 6
+    }
+   },
+   "Infiltration": {
+    "saint_class": "MITM",
+    "n": 8,
+    "detected": 5,
+    "recall": 0.625,
+    "ci95": [
+     0.2448632163665516,
+     0.9147665858627465
+    ],
+    "named_correctly": 5,
+    "named_as": {
+     "MITM": 5
+    }
+   },
+   "PortScan": {
+    "saint_class": "PORT_SCAN",
+    "n": 27076,
+    "detected": 27063,
+    "recall": 0.9995198699955681,
+    "ci95": [
+     0.9991791030182169,
+     0.9997443270161075
+    ],
+    "named_correctly": 27047,
+    "named_as": {
+     "PORT_SCAN": 27047,
+     "MITM": 1,
+     "DOS": 15
+    }
+   },
+   "SSH-Patator": {
+    "saint_class": "BRUTE_FORCE",
+    "n": 961,
+    "detected": 961,
+    "recall": 1.0,
+    "ci95": [
+     0.9961687737073188,
+     1.0
+    ],
+    "named_correctly": 961,
+    "named_as": {
+     "BRUTE_FORCE": 961
+    }
+   },
+   "Web Attack � Brute Force": {
+    "saint_class": "MITM",
+    "n": 435,
+    "detected": 421,
+    "recall": 0.967816091954023,
+    "ci95": [
+     0.9465900287641915,
+     0.9822952621272234
+    ],
+    "named_correctly": 420,
+    "named_as": {
+     "PORT_SCAN": 1,
+     "MITM": 420
+    }
+   },
+   "Web Attack � Sql Injection": {
+    "saint_class": "MITM",
+    "n": 6,
+    "detected": 4,
+    "recall": 0.6666666666666666,
+    "ci95": [
+     0.22277809550351213,
+     0.9567281317072583
+    ],
+    "named_correctly": 4,
+    "named_as": {
+     "MITM": 4
+    }
+   },
+   "Web Attack � XSS": {
+    "saint_class": "MITM",
+    "n": 193,
+    "detected": 182,
+    "recall": 0.9430051813471503,
+    "ci95": [
+     0.9003104514330997,
+     0.9712082879157485
+    ],
+    "named_correctly": 182,
+    "named_as": {
+     "MITM": 182
+    }
+   }
+  }
+ }
+}

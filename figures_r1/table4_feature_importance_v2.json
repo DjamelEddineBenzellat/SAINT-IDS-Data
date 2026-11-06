@@ -1,0 +1,126 @@
+{
+ "model": "edge/models_v2/lgbm_classifier.pkl",
+ "sha256": "20acb0c2311e162e40dc7c14769a48e50262833a1ffe5458f5c4440df0aae28a",
+ "trees": 1488,
+ "importance": "split count (gain also given)",
+ "top10_by_split": [
+  {
+   "rank": 1,
+   "index": 7,
+   "feature": "inter_arrival_time_min",
+   "note": "",
+   "split": 13791,
+   "gain": 549264.0044290012,
+   "gain_share": 0.020409900877861098
+  },
+  {
+   "rank": 2,
+   "index": 14,
+   "feature": "window_size",
+   "note": "",
+   "split": 10320,
+   "gain": 3994729.6341821863,
+   "gain_share": 0.14843870199044096
+  },
+  {
+   "rank": 3,
+   "index": 31,
+   "feature": "dst_port_number",
+   "note": "",
+   "split": 9342,
+   "gain": 5261573.307702975,
+   "gain_share": 0.19551288416115142
+  },
+  {
+   "rank": 4,
+   "index": 4,
+   "feature": "flow_duration_ms",
+   "note": "",
+   "split": 8512,
+   "gain": 1279097.7419060473,
+   "gain_share": 0.047529526629981306
+  },
+  {
+   "rank": 5,
+   "index": 23,
+   "feature": "connections_per_src_ip_per_minute",
+   "note": "Flow Bytes/s (CICIDS-2017) in slot 23",
+   "split": 7248,
+   "gain": 1581896.26999194,
+   "gain_share": 0.05878110673419721
+  },
+  {
+   "rank": 6,
+   "index": 5,
+   "feature": "inter_arrival_time_mean",
+   "note": "",
+   "split": 7043,
+   "gain": 1116392.148243265,
+   "gain_share": 0.041483608797839466
+  },
+  {
+   "rank": 7,
+   "index": 3,
+   "feature": "packets_per_second",
+   "note": "",
+   "split": 6414,
+   "gain": 1216773.9365713147,
+   "gain_share": 0.04521365907092769
+  },
+  {
+   "rank": 8,
+   "index": 8,
+   "feature": "inter_arrival_time_max",
+   "note": "",
+   "split": 6331,
+   "gain": 2821133.307840037,
+   "gain_share": 0.10482946399537879
+  },
+  {
+   "rank": 9,
+   "index": 6,
+   "feature": "inter_arrival_time_std",
+   "note": "",
+   "split": 5636,
+   "gain": 827236.6223460201,
+   "gain_share": 0.03073898403768659
+  },
+  {
+   "rank": 10,
+   "index": 0,
+   "feature": "total_bytes",
+   "note": "",
+   "split": 4878,
+   "gain": 1031766.146991623,
+   "gain_share": 0.0383390220721331
+  }
+ ],
+ "top10_by_gain": [
+  "dst_port_number",
+  "window_size",
+  "inter_arrival_time_max",
+  "bytes_per_packet",
+  "connections_per_src_ip_per_minute",
+  "total_packets",
+  "is_FHIR",
+  "flow_duration_ms",
+  "ack_count",
+  "packets_per_second"
+ ],
+ "unused_features": [
+  "retransmission_count",
+  "port_entropy",
+  "is_private_ip",
+  "new_ip_flag",
+  "is_DICOM",
+  "is_HL7",
+  "unique_dst_per_src_per_minute",
+  "port_scan_score",
+  "hour_of_day_sin",
+  "hour_of_day_cos",
+  "day_of_week_sin",
+  "day_of_week_cos",
+  "protocol_number"
+ ],
+ "n_unused": 13
+}

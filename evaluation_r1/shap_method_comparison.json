@@ -1,0 +1,66 @@
+{
+ "n_flows": 1000,
+ "n_alerting": 500,
+ "n_non_alerting": 500,
+ "explained_class": "argmax of the pkl model (as the API)",
+ "core": 2,
+ "methods": {
+  "M0_interventional_bg100": {
+   "mean_ms": 335.0381482660007,
+   "p50_ms": 341.9129780000958,
+   "p95_ms": 390.3117914498239,
+   "p99_ms": 411.9058515501115,
+   "max_ms": 431.58405799999855,
+   "exceptions": 0
+  },
+  "M1_tree_path_dependent": {
+   "mean_ms": 8.293179579997968,
+   "p50_ms": 8.247121999943374,
+   "p95_ms": 8.659685650070514,
+   "p99_ms": 8.844842200057883,
+   "max_ms": 9.099001000095086,
+   "exceptions": 0,
+   "agreement_vs_M0": {
+    "n": 1000,
+    "top5_jaccard_mean": 0.6100833333333334,
+    "top5_identical_pct": 13.4,
+    "top1_same_pct": 73.0,
+    "spearman_median": 0.7378019240726968
+   }
+  },
+  "M2_lightgbm_pred_contrib": {
+   "mean_ms": 8.259528454003203,
+   "p50_ms": 8.229525499928059,
+   "p95_ms": 8.57724809990259,
+   "p99_ms": 8.74433401997294,
+   "max_ms": 9.173111000109202,
+   "exceptions": 0,
+   "max_additivity_error": 5.684341886080802e-14,
+   "agreement_vs_M0": {
+    "n": 1000,
+    "top5_jaccard_mean": 0.6100833333333334,
+    "top5_identical_pct": 13.4,
+    "top1_same_pct": 73.0,
+    "spearman_median": 0.7378019240726968
+   }
+  }
+ },
+ "M1_vs_M2_max_abs_diff": 0.0,
+ "selection_rule": "fastest method with p99 <= 5 ms and zero exceptions (fixed before the run)",
+ "selected": null,
+ "meta": {
+  "repo_commit": "d83a6f1272f4cdc4dc8e8271eed7f0c34d8ece08",
+  "policy": {
+   "policy_id": "saint-ids-cprime",
+   "version": "2.0.0",
+   "alert_threshold": 0.25,
+   "threshold_status": "FINAL",
+   "critical_threshold": null,
+   "encrypt_alerts": true,
+   "rule_detectors_enabled": true,
+   "sha256": "d4a153112e81912b95b46b565dbeaf3392863ce30e7fa431ff9d564f07ab0987"
+  },
+  "elapsed_s": 368.0,
+  "cpu_count": 12
+ }
+}
