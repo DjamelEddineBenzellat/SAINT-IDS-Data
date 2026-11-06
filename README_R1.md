@@ -1,7 +1,7 @@
 # Revision 1 (R1) evidence
 
-This folder adds the evidence for the revised manuscript (CCPE, revision 1). The files from the original
-submission are kept unchanged for traceability; the ones the revision withdraws are listed below.
+This folder adds the evidence for the revised manuscript (CCPE, revision 1). The data and figure files from the
+original submission are kept unchanged for traceability; the ones the revision withdraws are listed below.
 
 ## What is new
 

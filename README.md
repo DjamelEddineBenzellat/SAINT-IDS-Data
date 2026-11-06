@@ -1,5 +1,7 @@
 # SAINT-IDS: Experimental Data and Evaluation Results
 
+> **Revision 1 (R1) of the paper:** the evidence for the revised manuscript is described in [README_R1.md](README_R1.md). This page describes the original submission. Its encryption timings came from a simulator that performs no CKKS arithmetic, and its classification and ablation results are superseded; README_R1.md lists what was withdrawn and what replaced it.
+
 [![DOI](https://zenodo.org/badge/DOI/XXXX.svg)](https://doi.org/XXXX)
 
 ## Overview
